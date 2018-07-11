@@ -67,6 +67,12 @@ module.exports =
 /************************************************************************/
 /******/ ([
 /* 0 */
+/***/ (function(module, exports) {
+
+module.exports = require("react");
+
+/***/ }),
+/* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -184,12 +190,6 @@ function configGet(path) {
   }
   return result;
 }
-
-/***/ }),
-/* 1 */
-/***/ (function(module, exports) {
-
-module.exports = require("react");
 
 /***/ }),
 /* 2 */
@@ -645,27 +645,27 @@ var _reactApplication = __webpack_require__(17);
 
 var _reactApplication2 = _interopRequireDefault(_reactApplication);
 
-var _security = __webpack_require__(41);
+var _security = __webpack_require__(45);
 
 var _security2 = _interopRequireDefault(_security);
 
-var _clientBundle = __webpack_require__(45);
+var _clientBundle = __webpack_require__(49);
 
 var _clientBundle2 = _interopRequireDefault(_clientBundle);
 
-var _serviceWorker = __webpack_require__(46);
+var _serviceWorker = __webpack_require__(50);
 
 var _serviceWorker2 = _interopRequireDefault(_serviceWorker);
 
-var _offlinePage = __webpack_require__(47);
+var _offlinePage = __webpack_require__(51);
 
 var _offlinePage2 = _interopRequireDefault(_offlinePage);
 
-var _errorHandlers = __webpack_require__(48);
+var _errorHandlers = __webpack_require__(52);
 
 var _errorHandlers2 = _interopRequireDefault(_errorHandlers);
 
-var _config = __webpack_require__(0);
+var _config = __webpack_require__(1);
 
 var _config2 = _interopRequireDefault(_config);
 
@@ -729,10 +729,10 @@ module.exports = require("compression");
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/home/b-rave/Documents/jalaj/Frontend-Development/server/middleware/reactApplication/index.js';
+var _jsxFileName = '/home/b-rave/Documents/jalaj/test/affiliate-web/server/middleware/reactApplication/index.js';
 exports.default = reactApplicationMiddleware;
 
-var _react = __webpack_require__(1);
+var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -758,7 +758,7 @@ var _configureStore = __webpack_require__(23);
 
 var _configureStore2 = _interopRequireDefault(_configureStore);
 
-var _config = __webpack_require__(0);
+var _config = __webpack_require__(1);
 
 var _config2 = _interopRequireDefault(_config);
 
@@ -766,7 +766,7 @@ var _App = __webpack_require__(31);
 
 var _App2 = _interopRequireDefault(_App);
 
-var _ServerHTML = __webpack_require__(36);
+var _ServerHTML = __webpack_require__(40);
 
 var _ServerHTML2 = _interopRequireDefault(_ServerHTML);
 
@@ -1051,6 +1051,36 @@ exports.default = rootReducer;
 "use strict";
 
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = test;
+// import { LOGIN, ERROR, FORGETPASSWORD } from '../actions/login_action';
+
+const initialState = {
+  response: ''
+};
+
+// receiving response sent by action according to type of action
+function test(state = initialState, action) {
+  switch (action.type) {
+    case 'LOGIN':
+      return { response: action.payload };
+      break;
+
+    case 'ERROR':
+      return { response: action.payload };
+      break;
+
+    case 'FORGETPASSWORD':
+      return { response: action.payload };
+      break;
+
+    default:
+      return state;
+  }
+}
+
 /***/ }),
 /* 28 */
 /***/ (function(module, exports, __webpack_require__) {
@@ -1191,9 +1221,9 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _jsxFileName = '/home/b-rave/Documents/jalaj/Frontend-Development/shared/components/App.js';
+var _jsxFileName = '/home/b-rave/Documents/jalaj/test/affiliate-web/shared/components/App.js';
 
-var _react = __webpack_require__(1);
+var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -1215,13 +1245,17 @@ var _Content = __webpack_require__(34);
 
 var _Content2 = _interopRequireDefault(_Content);
 
-var _config = __webpack_require__(0);
+var _config = __webpack_require__(1);
 
 var _config2 = _interopRequireDefault(_config);
 
-var _Main = __webpack_require__(35);
+var _Main = __webpack_require__(38);
 
 var _Main2 = _interopRequireDefault(_Main);
+
+var _Signup = __webpack_require__(39);
+
+var _Signup2 = _interopRequireDefault(_Signup);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1233,7 +1267,7 @@ class App extends _react.Component {
       { id: 'row', __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 14
+          lineNumber: 15
         }
       },
       _react2.default.createElement(
@@ -1242,94 +1276,133 @@ class App extends _react.Component {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 15
+            lineNumber: 16
           }
         },
         _react2.default.createElement('html', { lang: 'en', __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 16
+            lineNumber: 17
           }
         }),
         _react2.default.createElement('meta', { charSet: 'utf-8', __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 17
+            lineNumber: 18
           }
         }),
         _react2.default.createElement('meta', { name: 'application-name', content: (0, _config2.default)('htmlPage.defaultTitle'), __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 18
+            lineNumber: 19
           }
         }),
         _react2.default.createElement('meta', { name: 'description', content: (0, _config2.default)('htmlPage.description'), __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 19
+            lineNumber: 20
           }
         }),
         _react2.default.createElement('meta', { httpEquiv: 'X-UA-Compatible', content: 'IE=edge', __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 20
+            lineNumber: 21
           }
         }),
         _react2.default.createElement('meta', { name: 'viewport', content: 'width=device-width, initial-scale=1', __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 21
+            lineNumber: 22
           }
         }),
         _react2.default.createElement('meta', { name: 'msapplication-TileColor', content: '#2b2b2b', __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 22
+            lineNumber: 23
           }
         }),
         _react2.default.createElement('meta', { name: 'msapplication-TileImage', content: '/favicons/mstile-144x144.png', __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 23
+            lineNumber: 24
           }
         }),
         _react2.default.createElement('meta', { name: 'theme-color', content: '#2b2b2b', __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 24
-          }
-        }),
-        _react2.default.createElement('link', { href: '../assets/css/bootstrap.min.css', rel: 'stylesheet', __self: this,
-          __source: {
-            fileName: _jsxFileName,
             lineNumber: 25
           }
         }),
-        _react2.default.createElement('link', { href: '../assets/css/main.css', rel: 'stylesheet', __self: this,
+        _react2.default.createElement('link', { href: '../assets/css/bootstrap.css', rel: 'stylesheet', __self: this,
           __source: {
             fileName: _jsxFileName,
             lineNumber: 26
           }
         }),
-        _react2.default.createElement('link', { href: '../assets/font-awesome/css/font-awesome.min.css', rel: 'stylesheet', __self: this,
+        _react2.default.createElement('link', { href: '../assets/css/bootstrap.min.css', rel: 'stylesheet', __self: this,
           __source: {
             fileName: _jsxFileName,
             lineNumber: 27
           }
         }),
-        _react2.default.createElement('link', { href: 'https://fonts.googleapis.com/css?family=Oxygen', rel: 'stylesheet', __self: this,
+        _react2.default.createElement('link', { href: '../assets/css/mdb.css', rel: 'stylesheet', __self: this,
           __source: {
             fileName: _jsxFileName,
             lineNumber: 28
           }
         }),
-        _react2.default.createElement('link', {
-          href: 'https://fonts.googleapis.com/css?family=Oxygen:300,400,700',
-          rel: 'stylesheet',
-          __self: this,
+        _react2.default.createElement('link', { href: '../assets/css/mdb.min.css', rel: 'stylesheet', __self: this,
           __source: {
             fileName: _jsxFileName,
             lineNumber: 29
+          }
+        }),
+        _react2.default.createElement('link', { href: '../assets/css/main.css', rel: 'stylesheet', __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 30
+          }
+        }),
+        _react2.default.createElement('link', { href: '../assets/css/style.min.css', rel: 'stylesheet', __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 31
+          }
+        }),
+        _react2.default.createElement('link', { rel: 'stylesheet', href: 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 32
+          }
+        }),
+        _react2.default.createElement('link', { href: 'https://fonts.googleapis.com/css?family=Muli:400,600', rel: 'stylesheet', __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 33
+          }
+        }),
+        _react2.default.createElement('script', { src: '../assets/js/jquery-3.3.1.min.js', __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 34
+          }
+        }),
+        _react2.default.createElement('script', { src: '../assets/js/bootstrap.js', __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 35
+          }
+        }),
+        _react2.default.createElement('script', { src: '../assets/js/mdb.min.js', __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 36
+          }
+        }),
+        _react2.default.createElement('script', { src: '../assets/js/popper.min.js', __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 37
           }
         }),
         _react2.default.createElement(
@@ -1338,7 +1411,7 @@ class App extends _react.Component {
             __self: this,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 33
+              lineNumber: 38
             }
           },
           (0, _config2.default)('htmlPage.defaultTitle'),
@@ -1346,66 +1419,55 @@ class App extends _react.Component {
         )
       ),
       _react2.default.createElement(
-        'div',
-        { className: 'container content no_padding', __self: this,
+        _Switch2.default,
+        {
+          __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 37
+            lineNumber: 42
           }
         },
         _react2.default.createElement(
-          'div',
-          { className: 'col-xs-12 no_padding', __self: this,
+          _Main2.default,
+          {
+            __self: this,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 38
+              lineNumber: 43
             }
           },
-          _react2.default.createElement(
-            'div',
-            { className: 'row no_margin', __self: this,
+          _react2.default.createElement(_Route2.default, {
+            exact: true,
+            path: '/',
+            render: props => _react2.default.createElement(_Content2.default, _extends({}, props, {
+              __self: this,
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 39
+                lineNumber: 47
               }
-            },
-            _react2.default.createElement(
-              _Switch2.default,
-              {
-                __self: this,
-                __source: {
-                  fileName: _jsxFileName,
-                  lineNumber: 40
-                }
-              },
-              _react2.default.createElement(
-                _Main2.default,
-                {
-                  __self: this,
-                  __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 41
-                  }
-                },
-                _react2.default.createElement(_Route2.default, {
-                  exact: true,
-                  path: '/',
-                  render: props => _react2.default.createElement(_Content2.default, _extends({}, props, {
-                    __self: this,
-                    __source: {
-                      fileName: _jsxFileName,
-                      lineNumber: 45
-                    }
-                  })),
-                  __self: this,
-                  __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 42
-                  }
-                })
-              )
-            )
-          )
+            })),
+            __self: this,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 44
+            }
+          }),
+          _react2.default.createElement(_Route2.default, {
+            exact: true,
+            path: '/signup',
+            render: props => _react2.default.createElement(_Signup2.default, _extends({}, props, {
+              __self: this,
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 52
+              }
+            })),
+            __self: this,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 49
+            }
+          })
         )
       )
     );
@@ -1435,14 +1497,18 @@ module.exports = require("react-router-dom/Route");
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/home/b-rave/Documents/jalaj/Frontend-Development/shared/components/Content.js'; // Component containing all the components rendering,
+var _jsxFileName = '/home/b-rave/Documents/jalaj/test/affiliate-web/shared/components/Content.js'; // Component containing all the components rendering,
 // of all child Routes.
 
-var _react = __webpack_require__(1);
+var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
 var _reactRedux = __webpack_require__(4);
+
+var _Middle = __webpack_require__(36);
+
+var _Middle2 = _interopRequireDefault(_Middle);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1457,19 +1523,16 @@ class Content extends _react.Component {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 12
+          lineNumber: 14
         }
       },
-      _react2.default.createElement(
-        'div',
-        { className: 'row no_margin', __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 13
-          }
-        },
-        'hello'
-      )
+      _react2.default.createElement(_Middle2.default, {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 15
+        }
+      })
     );
   }
 }
@@ -1492,13 +1555,1647 @@ exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(
 
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
-var _jsxFileName = '/home/b-rave/Documents/jalaj/Frontend-Development/shared/components/Main.js';
+var _jsxFileName = '/home/b-rave/Documents/jalaj/test/affiliate-web/shared/components/Header.js';
 
-var _react = __webpack_require__(1);
+var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
+
+var _reactRouterDom = __webpack_require__(19);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+class Header extends _react.Component {
+
+    toggleNavbar() {
+        console.log("this.props.location.pathName", this.props.location);
+        if (this.props.location.pathname == "/signup") {
+            return _react2.default.createElement(
+                'nav',
+                {
+                    __self: this,
+                    __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 10
+                    }
+                },
+                _react2.default.createElement(
+                    'div',
+                    { className: 'container', __self: this,
+                        __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 11
+                        }
+                    },
+                    _react2.default.createElement(
+                        'a',
+                        { className: 'navbar-brand', href: '#', target: '_blank', __self: this,
+                            __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 12
+                            }
+                        },
+                        _react2.default.createElement('img', { src: '../assets/images/logo-black.png', className: 'float-left', alt: 'placeholder', __self: this,
+                            __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 13
+                            }
+                        })
+                    )
+                )
+            );
+        } else {
+            return _react2.default.createElement(
+                'div',
+                { className: 'header-image', __self: this,
+                    __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 20
+                    }
+                },
+                _react2.default.createElement(
+                    'nav',
+                    {
+                        __self: this,
+                        __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 21
+                        }
+                    },
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'container-fluid', __self: this,
+                            __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 22
+                            }
+                        },
+                        _react2.default.createElement(
+                            'div',
+                            { className: 'container', __self: this,
+                                __source: {
+                                    fileName: _jsxFileName,
+                                    lineNumber: 23
+                                }
+                            },
+                            _react2.default.createElement(
+                                'a',
+                                { className: 'navbar-brand', href: '#', target: '_blank', __self: this,
+                                    __source: {
+                                        fileName: _jsxFileName,
+                                        lineNumber: 24
+                                    }
+                                },
+                                _react2.default.createElement('img', { src: '../assets/images/logo-white.png', className: 'float-left', alt: 'placeholder', __self: this,
+                                    __source: {
+                                        fileName: _jsxFileName,
+                                        lineNumber: 25
+                                    }
+                                })
+                            )
+                        ),
+                        _react2.default.createElement(
+                            'section',
+                            { className: 'mt-5 wow fadeIn', __self: this,
+                                __source: {
+                                    fileName: _jsxFileName,
+                                    lineNumber: 29
+                                }
+                            },
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'row', __self: this,
+                                    __source: {
+                                        fileName: _jsxFileName,
+                                        lineNumber: 30
+                                    }
+                                },
+                                _react2.default.createElement(
+                                    'div',
+                                    { className: 'col-md-12', __self: this,
+                                        __source: {
+                                            fileName: _jsxFileName,
+                                            lineNumber: 31
+                                        }
+                                    },
+                                    _react2.default.createElement(
+                                        'h2',
+                                        { className: 'text-center white-text mb-4', __self: this,
+                                            __source: {
+                                                fileName: _jsxFileName,
+                                                lineNumber: 32
+                                            }
+                                        },
+                                        'Affiliate advertising using ',
+                                        _react2.default.createElement('br', {
+                                            __self: this,
+                                            __source: {
+                                                fileName: _jsxFileName,
+                                                lineNumber: 32
+                                            }
+                                        }),
+                                        ' mattchnies learning'
+                                    ),
+                                    _react2.default.createElement(
+                                        'h6',
+                                        { className: 'text-center white-text mb-4', __self: this,
+                                            __source: {
+                                                fileName: _jsxFileName,
+                                                lineNumber: 33
+                                            }
+                                        },
+                                        'Who you are?'
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { className: 'row my-3 d-flex justify-content-center', __self: this,
+                                            __source: {
+                                                fileName: _jsxFileName,
+                                                lineNumber: 34
+                                            }
+                                        },
+                                        _react2.default.createElement(
+                                            'div',
+                                            { className: 'col-sm-12 col-md-6 mb-4 text-md-right bussiness', __self: this,
+                                                __source: {
+                                                    fileName: _jsxFileName,
+                                                    lineNumber: 35
+                                                }
+                                            },
+                                            _react2.default.createElement(
+                                                _reactRouterDom.NavLink,
+                                                { to: '/signup', __self: this,
+                                                    __source: {
+                                                        fileName: _jsxFileName,
+                                                        lineNumber: 36
+                                                    }
+                                                },
+                                                _react2.default.createElement(
+                                                    'button',
+                                                    {
+                                                        type: 'button',
+                                                        className: 'btn btn-transparent btn-rounded btn-border z-depth-1a',
+                                                        __self: this,
+                                                        __source: {
+                                                            fileName: _jsxFileName,
+                                                            lineNumber: 37
+                                                        }
+                                                    },
+                                                    _react2.default.createElement(
+                                                        'span',
+                                                        { className: 'mx-3', __self: this,
+                                                            __source: {
+                                                                fileName: _jsxFileName,
+                                                                lineNumber: 41
+                                                            }
+                                                        },
+                                                        'Bussiness'
+                                                    )
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                'p',
+                                                { className: 'text-center py-4 white-text text-md-right', __self: this,
+                                                    __source: {
+                                                        fileName: _jsxFileName,
+                                                        lineNumber: 44
+                                                    }
+                                                },
+                                                'I want to get published!'
+                                            )
+                                        ),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { className: 'col-md-6 col-xs-12 mb-4 publisher', __self: this,
+                                                __source: {
+                                                    fileName: _jsxFileName,
+                                                    lineNumber: 46
+                                                }
+                                            },
+                                            _react2.default.createElement(
+                                                _reactRouterDom.NavLink,
+                                                { to: '/signup', __self: this,
+                                                    __source: {
+                                                        fileName: _jsxFileName,
+                                                        lineNumber: 47
+                                                    }
+                                                },
+                                                _react2.default.createElement(
+                                                    'button',
+                                                    {
+                                                        type: 'button',
+                                                        className: 'btn btn-transparent btn-rounded btn-border z-depth-1a',
+                                                        __self: this,
+                                                        __source: {
+                                                            fileName: _jsxFileName,
+                                                            lineNumber: 48
+                                                        }
+                                                    },
+                                                    _react2.default.createElement(
+                                                        'span',
+                                                        { className: 'mx-3', __self: this,
+                                                            __source: {
+                                                                fileName: _jsxFileName,
+                                                                lineNumber: 52
+                                                            }
+                                                        },
+                                                        'Publisher'
+                                                    )
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                'p',
+                                                { className: 'text-center py-4 white-text text-md-left', __self: this,
+                                                    __source: {
+                                                        fileName: _jsxFileName,
+                                                        lineNumber: 55
+                                                    }
+                                                },
+                                                '(Blog, Website, Ecommerce)'
+                                            )
+                                        ),
+                                        _react2.default.createElement('img', { id: 'laptop',
+                                            className: 'mockups img-fluid float-left', src: '../assets/images/mockups.png', alt: 'placeholder',
+                                            __self: this,
+                                            __source: {
+                                                fileName: _jsxFileName,
+                                                lineNumber: 57
+                                            }
+                                        }),
+                                        _react2.default.createElement('img', { id: 'cellphone',
+                                            className: 'mockups img-fluid float-left', src: '../assets/images/cell-mockups.png', alt: 'placeholder',
+                                            __self: this,
+                                            __source: {
+                                                fileName: _jsxFileName,
+                                                lineNumber: 60
+                                            }
+                                        })
+                                    )
+                                )
+                            )
+                        )
+                    )
+                )
+            );
+        }
+    }
+    render() {
+        const navbar = this.toggleNavbar();
+        return _react2.default.createElement(
+            'div',
+            {
+                __self: this,
+                __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 76
+                }
+            },
+            navbar
+        );
+    }
+}
+exports.default = Header;
+
+/***/ }),
+/* 36 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+var _jsxFileName = "/home/b-rave/Documents/jalaj/test/affiliate-web/shared/components/Middle.js";
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+class Middle extends _react.Component {
+    render() {
+        return _react2.default.createElement(
+            "main",
+            {
+                __self: this,
+                __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 6
+                }
+            },
+            _react2.default.createElement(
+                "div",
+                { className: "container", __self: this,
+                    __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 7
+                    }
+                },
+                _react2.default.createElement(
+                    "section",
+                    { className: "text-center my-5", __self: this,
+                        __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 8
+                        }
+                    },
+                    _react2.default.createElement(
+                        "h5",
+                        { className: "text-center py-2 color-primary", __self: this,
+                            __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 9
+                            }
+                        },
+                        "Our Process"
+                    ),
+                    _react2.default.createElement(
+                        "h3",
+                        { className: "mb-5", __self: this,
+                            __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 10
+                            }
+                        },
+                        "Check out how your organisation stacks",
+                        _react2.default.createElement("br", {
+                            __self: this,
+                            __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 10
+                            }
+                        }),
+                        "up against competitors"
+                    ),
+                    _react2.default.createElement(
+                        "div",
+                        { className: "row", __self: this,
+                            __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 11
+                            }
+                        },
+                        _react2.default.createElement(
+                            "div",
+                            { className: "col-lg-4 col-md-4 mb-lg-0 mb-4", __self: this,
+                                __source: {
+                                    fileName: _jsxFileName,
+                                    lineNumber: 12
+                                }
+                            },
+                            _react2.default.createElement(
+                                "div",
+                                { className: "card rounded testimonial-card", __self: this,
+                                    __source: {
+                                        fileName: _jsxFileName,
+                                        lineNumber: 13
+                                    }
+                                },
+                                _react2.default.createElement("div", { className: "card-up info-color", __self: this,
+                                    __source: {
+                                        fileName: _jsxFileName,
+                                        lineNumber: 14
+                                    }
+                                }),
+                                _react2.default.createElement(
+                                    "div",
+                                    { className: "avatar mx-auto white", __self: this,
+                                        __source: {
+                                            fileName: _jsxFileName,
+                                            lineNumber: 15
+                                        }
+                                    },
+                                    _react2.default.createElement("img", { src: "../assets/images/Icon/time.png", className: "rounded-circle img-fluid", alt: "", __self: this,
+                                        __source: {
+                                            fileName: _jsxFileName,
+                                            lineNumber: 16
+                                        }
+                                    })
+                                ),
+                                _react2.default.createElement(
+                                    "div",
+                                    { className: "card-body mb-4", __self: this,
+                                        __source: {
+                                            fileName: _jsxFileName,
+                                            lineNumber: 18
+                                        }
+                                    },
+                                    _react2.default.createElement(
+                                        "h4",
+                                        { className: "mb-4", __self: this,
+                                            __source: {
+                                                fileName: _jsxFileName,
+                                                lineNumber: 19
+                                            }
+                                        },
+                                        "30 Days Period Crap"
+                                    ),
+                                    _react2.default.createElement(
+                                        "p",
+                                        { className: "dark-grey-text mt-4", __self: this,
+                                            __source: {
+                                                fileName: _jsxFileName,
+                                                lineNumber: 20
+                                            }
+                                        },
+                                        "Get Paid Even after 90 Days. If you\u2019re",
+                                        _react2.default.createElement("br", {
+                                            __self: this,
+                                            __source: {
+                                                fileName: _jsxFileName,
+                                                lineNumber: 20
+                                            }
+                                        }),
+                                        " the source then you remain"
+                                    )
+                                )
+                            )
+                        ),
+                        _react2.default.createElement(
+                            "div",
+                            { className: "col-lg-4 col-md-4 mb-md-0 mb-4", __self: this,
+                                __source: {
+                                    fileName: _jsxFileName,
+                                    lineNumber: 24
+                                }
+                            },
+                            _react2.default.createElement(
+                                "div",
+                                { className: "card rounded testimonial-card", __self: this,
+                                    __source: {
+                                        fileName: _jsxFileName,
+                                        lineNumber: 25
+                                    }
+                                },
+                                _react2.default.createElement("div", { className: "card-up blue-gradient", __self: this,
+                                    __source: {
+                                        fileName: _jsxFileName,
+                                        lineNumber: 26
+                                    }
+                                }),
+                                _react2.default.createElement(
+                                    "div",
+                                    { className: "avatar mx-auto white", __self: this,
+                                        __source: {
+                                            fileName: _jsxFileName,
+                                            lineNumber: 28
+                                        }
+                                    },
+                                    _react2.default.createElement("img", { src: "../assets/images/Icon/network.png", className: "rounded-circle img-fluid", alt: "", __self: this,
+                                        __source: {
+                                            fileName: _jsxFileName,
+                                            lineNumber: 29
+                                        }
+                                    })
+                                ),
+                                _react2.default.createElement(
+                                    "div",
+                                    { className: "card-body mb-4", __self: this,
+                                        __source: {
+                                            fileName: _jsxFileName,
+                                            lineNumber: 31
+                                        }
+                                    },
+                                    _react2.default.createElement(
+                                        "h4",
+                                        { className: "mb-4", __self: this,
+                                            __source: {
+                                                fileName: _jsxFileName,
+                                                lineNumber: 32
+                                            }
+                                        },
+                                        "Get Easy Links"
+                                    ),
+                                    _react2.default.createElement(
+                                        "p",
+                                        { className: "dark-grey-text mt-4", __self: this,
+                                            __source: {
+                                                fileName: _jsxFileName,
+                                                lineNumber: 33
+                                            }
+                                        },
+                                        "Get links to put on your blogs",
+                                        _react2.default.createElement("br", {
+                                            __self: this,
+                                            __source: {
+                                                fileName: _jsxFileName,
+                                                lineNumber: 33
+                                            }
+                                        }),
+                                        " as soon as you register"
+                                    )
+                                )
+                            )
+                        ),
+                        _react2.default.createElement(
+                            "div",
+                            { className: "col-lg-4 col-md-4", __self: this,
+                                __source: {
+                                    fileName: _jsxFileName,
+                                    lineNumber: 37
+                                }
+                            },
+                            _react2.default.createElement(
+                                "div",
+                                { className: "card rounded testimonial-card", __self: this,
+                                    __source: {
+                                        fileName: _jsxFileName,
+                                        lineNumber: 38
+                                    }
+                                },
+                                _react2.default.createElement("div", { className: "card-up indigo", __self: this,
+                                    __source: {
+                                        fileName: _jsxFileName,
+                                        lineNumber: 39
+                                    }
+                                }),
+                                _react2.default.createElement(
+                                    "div",
+                                    { className: "avatar mx-auto white", __self: this,
+                                        __source: {
+                                            fileName: _jsxFileName,
+                                            lineNumber: 40
+                                        }
+                                    },
+                                    _react2.default.createElement("img", { src: "../assets/images/Icon/db.png", className: "rounded-circle img-fluid", alt: "", __self: this,
+                                        __source: {
+                                            fileName: _jsxFileName,
+                                            lineNumber: 41
+                                        }
+                                    })
+                                ),
+                                _react2.default.createElement(
+                                    "div",
+                                    { className: "card-body mb-4", __self: this,
+                                        __source: {
+                                            fileName: _jsxFileName,
+                                            lineNumber: 43
+                                        }
+                                    },
+                                    _react2.default.createElement(
+                                        "h4",
+                                        { className: "mb-4", __self: this,
+                                            __source: {
+                                                fileName: _jsxFileName,
+                                                lineNumber: 44
+                                            }
+                                        },
+                                        "Get Competitive Analysis"
+                                    ),
+                                    _react2.default.createElement(
+                                        "p",
+                                        { className: "dark-grey-text mt-4", __self: this,
+                                            __source: {
+                                                fileName: _jsxFileName,
+                                                lineNumber: 45
+                                            }
+                                        },
+                                        "Know the source of every Purchase.",
+                                        _react2.default.createElement("br", {
+                                            __self: this,
+                                            __source: {
+                                                fileName: _jsxFileName,
+                                                lineNumber: 45
+                                            }
+                                        }),
+                                        " Get detailed Analysis"
+                                    )
+                                )
+                            )
+                        )
+                    )
+                )
+            ),
+            _react2.default.createElement(
+                "div",
+                { className: "container-fluid wave", __self: this,
+                    __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 52
+                    }
+                },
+                _react2.default.createElement(
+                    "section",
+                    { className: "mt-5 wow fadeIn", __self: this,
+                        __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 53
+                        }
+                    },
+                    _react2.default.createElement(
+                        "div",
+                        { className: "row pt-5", __self: this,
+                            __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 54
+                            }
+                        },
+                        _react2.default.createElement(
+                            "div",
+                            { className: "col-md-7 mb-4 px-0", __self: this,
+                                __source: {
+                                    fileName: _jsxFileName,
+                                    lineNumber: 55
+                                }
+                            },
+                            _react2.default.createElement("img", { src: "../assets/images/home/1.png", className: "img-fluid", alt: "", __self: this,
+                                __source: {
+                                    fileName: _jsxFileName,
+                                    lineNumber: 56
+                                }
+                            })
+                        ),
+                        _react2.default.createElement(
+                            "div",
+                            { className: "col-md-4 my-auto", __self: this,
+                                __source: {
+                                    fileName: _jsxFileName,
+                                    lineNumber: 58
+                                }
+                            },
+                            _react2.default.createElement(
+                                "h3",
+                                { className: "h3 mb-3", __self: this,
+                                    __source: {
+                                        fileName: _jsxFileName,
+                                        lineNumber: 59
+                                    }
+                                },
+                                "For Publishers -",
+                                _react2.default.createElement("br", {
+                                    __self: this,
+                                    __source: {
+                                        fileName: _jsxFileName,
+                                        lineNumber: 59
+                                    }
+                                }),
+                                " Blogs, Websites, ",
+                                _react2.default.createElement("br", {
+                                    __self: this,
+                                    __source: {
+                                        fileName: _jsxFileName,
+                                        lineNumber: 59
+                                    }
+                                }),
+                                " E-commerce Stores"
+                            ),
+                            _react2.default.createElement(
+                                "p",
+                                {
+                                    __self: this,
+                                    __source: {
+                                        fileName: _jsxFileName,
+                                        lineNumber: 60
+                                    }
+                                },
+                                "Get Offers or Request offers from the business also get complete ",
+                                _react2.default.createElement("br", {
+                                    __self: this,
+                                    __source: {
+                                        fileName: _jsxFileName,
+                                        lineNumber: 60
+                                    }
+                                }),
+                                "Product analysis that is Product\u2019s Credibility , User Trust , Brand value , Reviews and more. ",
+                                _react2.default.createElement("br", {
+                                    __self: this,
+                                    __source: {
+                                        fileName: _jsxFileName,
+                                        lineNumber: 60
+                                    }
+                                }),
+                                _react2.default.createElement("br", {
+                                    __self: this,
+                                    __source: {
+                                        fileName: _jsxFileName,
+                                        lineNumber: 60
+                                    }
+                                }),
+                                "So that you can decide which products to publish wisely"
+                            ),
+                            _react2.default.createElement(
+                                "div",
+                                { className: "text-left py-4 mt-3", __self: this,
+                                    __source: {
+                                        fileName: _jsxFileName,
+                                        lineNumber: 61
+                                    }
+                                },
+                                _react2.default.createElement(
+                                    "button",
+                                    { className: "btn blue-gradient btn-rounded ml-0 px-5 text-capitalize", __self: this,
+                                        __source: {
+                                            fileName: _jsxFileName,
+                                            lineNumber: 62
+                                        }
+                                    },
+                                    "Get Offer"
+                                )
+                            )
+                        )
+                    )
+                )
+            ),
+            _react2.default.createElement(
+                "div",
+                { className: "container-fluid", __self: this,
+                    __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 68
+                    }
+                },
+                _react2.default.createElement(
+                    "section",
+                    { className: "mt-5 wow fadeIn", __self: this,
+                        __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 69
+                        }
+                    },
+                    _react2.default.createElement(
+                        "div",
+                        { className: "row", __self: this,
+                            __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 70
+                            }
+                        },
+                        _react2.default.createElement(
+                            "div",
+                            { className: "col-md-4 offset-md-1 my-auto", __self: this,
+                                __source: {
+                                    fileName: _jsxFileName,
+                                    lineNumber: 71
+                                }
+                            },
+                            _react2.default.createElement(
+                                "h3",
+                                { className: "h3 mb-3", __self: this,
+                                    __source: {
+                                        fileName: _jsxFileName,
+                                        lineNumber: 72
+                                    }
+                                },
+                                "For Business-",
+                                _react2.default.createElement("br", {
+                                    __self: this,
+                                    __source: {
+                                        fileName: _jsxFileName,
+                                        lineNumber: 72
+                                    }
+                                }),
+                                " Online , Offline"
+                            ),
+                            _react2.default.createElement(
+                                "p",
+                                {
+                                    __self: this,
+                                    __source: {
+                                        fileName: _jsxFileName,
+                                        lineNumber: 73
+                                    }
+                                },
+                                "Get Offers or Request offers from the business also get complete ",
+                                _react2.default.createElement("br", {
+                                    __self: this,
+                                    __source: {
+                                        fileName: _jsxFileName,
+                                        lineNumber: 73
+                                    }
+                                }),
+                                "Product analysis that is Product\u2019s Credibility , User Trust , Brand value , Reviews and more. ",
+                                _react2.default.createElement("br", {
+                                    __self: this,
+                                    __source: {
+                                        fileName: _jsxFileName,
+                                        lineNumber: 73
+                                    }
+                                }),
+                                _react2.default.createElement("br", {
+                                    __self: this,
+                                    __source: {
+                                        fileName: _jsxFileName,
+                                        lineNumber: 73
+                                    }
+                                }),
+                                "So that you can decide which products to publish wisely"
+                            ),
+                            _react2.default.createElement(
+                                "div",
+                                { className: "text-left py-4 mt-3", __self: this,
+                                    __source: {
+                                        fileName: _jsxFileName,
+                                        lineNumber: 74
+                                    }
+                                },
+                                _react2.default.createElement(
+                                    "button",
+                                    { className: "btn blue-gradient btn-rounded ml-0 px-5 text-capitalize", __self: this,
+                                        __source: {
+                                            fileName: _jsxFileName,
+                                            lineNumber: 75
+                                        }
+                                    },
+                                    "Get Offer"
+                                )
+                            )
+                        ),
+                        _react2.default.createElement(
+                            "div",
+                            { className: "col-md-7 mb-4 px-0", __self: this,
+                                __source: {
+                                    fileName: _jsxFileName,
+                                    lineNumber: 78
+                                }
+                            },
+                            _react2.default.createElement("img", { src: "../assets/images/home/2.png", className: "img-fluid", alt: "", __self: this,
+                                __source: {
+                                    fileName: _jsxFileName,
+                                    lineNumber: 79
+                                }
+                            })
+                        )
+                    )
+                )
+            ),
+            _react2.default.createElement(
+                "div",
+                { className: "container-fluid wave", __self: this,
+                    __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 84
+                    }
+                },
+                _react2.default.createElement(
+                    "section",
+                    { className: "mt-5 wow fadeIn", __self: this,
+                        __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 85
+                        }
+                    },
+                    _react2.default.createElement(
+                        "div",
+                        { className: "row", __self: this,
+                            __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 86
+                            }
+                        },
+                        _react2.default.createElement(
+                            "div",
+                            { className: "col-md-7 mb-4 px-0", __self: this,
+                                __source: {
+                                    fileName: _jsxFileName,
+                                    lineNumber: 87
+                                }
+                            },
+                            _react2.default.createElement("img", { src: "../assets/images/home/3.png", className: "img-fluid", alt: "", __self: this,
+                                __source: {
+                                    fileName: _jsxFileName,
+                                    lineNumber: 88
+                                }
+                            })
+                        ),
+                        _react2.default.createElement(
+                            "div",
+                            { className: "col-md-4 my-auto", __self: this,
+                                __source: {
+                                    fileName: _jsxFileName,
+                                    lineNumber: 90
+                                }
+                            },
+                            _react2.default.createElement(
+                                "h3",
+                                { className: "h3 mb-3", __self: this,
+                                    __source: {
+                                        fileName: _jsxFileName,
+                                        lineNumber: 91
+                                    }
+                                },
+                                "Get Recommendation",
+                                _react2.default.createElement("br", {
+                                    __self: this,
+                                    __source: {
+                                        fileName: _jsxFileName,
+                                        lineNumber: 91
+                                    }
+                                }),
+                                " and potential earnings",
+                                _react2.default.createElement("br", {
+                                    __self: this,
+                                    __source: {
+                                        fileName: _jsxFileName,
+                                        lineNumber: 91
+                                    }
+                                }),
+                                " for product "
+                            ),
+                            _react2.default.createElement(
+                                "p",
+                                {
+                                    __self: this,
+                                    __source: {
+                                        fileName: _jsxFileName,
+                                        lineNumber: 92
+                                    }
+                                },
+                                "Publishers can Get recommended products and see ",
+                                _react2.default.createElement("br", {
+                                    __self: this,
+                                    __source: {
+                                        fileName: _jsxFileName,
+                                        lineNumber: 92
+                                    }
+                                }),
+                                "expected earnings through that product . In the similar way ",
+                                _react2.default.createElement("br", {
+                                    __self: this,
+                                    __source: {
+                                        fileName: _jsxFileName,
+                                        lineNumber: 92
+                                    }
+                                }),
+                                "Businesses Can get recommended websites and see ",
+                                _react2.default.createElement("br", {
+                                    __self: this,
+                                    __source: {
+                                        fileName: _jsxFileName,
+                                        lineNumber: 92
+                                    }
+                                }),
+                                "expected earnings."
+                            ),
+                            _react2.default.createElement(
+                                "div",
+                                { className: "text-left py-4 mt-3", __self: this,
+                                    __source: {
+                                        fileName: _jsxFileName,
+                                        lineNumber: 93
+                                    }
+                                },
+                                _react2.default.createElement(
+                                    "button",
+                                    { className: "btn blue-gradient btn-rounded ml-0 px-5 text-capitalize", __self: this,
+                                        __source: {
+                                            fileName: _jsxFileName,
+                                            lineNumber: 94
+                                        }
+                                    },
+                                    "Get Offer"
+                                )
+                            )
+                        )
+                    )
+                )
+            ),
+            _react2.default.createElement(
+                "div",
+                { className: "container-fluid", __self: this,
+                    __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 100
+                    }
+                },
+                _react2.default.createElement(
+                    "section",
+                    { className: "mt-5 wow fadeIn", __self: this,
+                        __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 101
+                        }
+                    },
+                    _react2.default.createElement(
+                        "div",
+                        { className: "row", __self: this,
+                            __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 102
+                            }
+                        },
+                        _react2.default.createElement(
+                            "div",
+                            { className: "col-md-4 offset-md-1 my-auto", __self: this,
+                                __source: {
+                                    fileName: _jsxFileName,
+                                    lineNumber: 103
+                                }
+                            },
+                            _react2.default.createElement(
+                                "h3",
+                                { className: "h3 mb-3", __self: this,
+                                    __source: {
+                                        fileName: _jsxFileName,
+                                        lineNumber: 104
+                                    }
+                                },
+                                "Get the complete",
+                                _react2.default.createElement("br", {
+                                    __self: this,
+                                    __source: {
+                                        fileName: _jsxFileName,
+                                        lineNumber: 104
+                                    }
+                                }),
+                                " competitive Analysis"
+                            ),
+                            _react2.default.createElement(
+                                "p",
+                                {
+                                    __self: this,
+                                    __source: {
+                                        fileName: _jsxFileName,
+                                        lineNumber: 105
+                                    }
+                                },
+                                "Find the source behind very single sale whether your ",
+                                _react2.default.createElement("br", {
+                                    __self: this,
+                                    __source: {
+                                        fileName: _jsxFileName,
+                                        lineNumber: 105
+                                    }
+                                }),
+                                "business is online or offline And get ways to improve your",
+                                _react2.default.createElement("br", {
+                                    __self: this,
+                                    __source: {
+                                        fileName: _jsxFileName,
+                                        lineNumber: 105
+                                    }
+                                }),
+                                "sale."
+                            ),
+                            _react2.default.createElement(
+                                "div",
+                                { className: "text-left py-4 mt-3", __self: this,
+                                    __source: {
+                                        fileName: _jsxFileName,
+                                        lineNumber: 106
+                                    }
+                                },
+                                _react2.default.createElement(
+                                    "button",
+                                    { className: "btn blue-gradient btn-rounded ml-0 px-5 text-capitalize", __self: this,
+                                        __source: {
+                                            fileName: _jsxFileName,
+                                            lineNumber: 107
+                                        }
+                                    },
+                                    "Get Offer"
+                                )
+                            )
+                        ),
+                        _react2.default.createElement(
+                            "div",
+                            { className: "col-md-7 mb-4 px-0", __self: this,
+                                __source: {
+                                    fileName: _jsxFileName,
+                                    lineNumber: 110
+                                }
+                            },
+                            _react2.default.createElement("img", { src: "../assets/images/home/4.png", className: "img-fluid", alt: "", __self: this,
+                                __source: {
+                                    fileName: _jsxFileName,
+                                    lineNumber: 111
+                                }
+                            })
+                        )
+                    )
+                )
+            )
+        );
+    }
+}
+exports.default = Middle;
+
+/***/ }),
+/* 37 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+var _jsxFileName = "/home/b-rave/Documents/jalaj/test/affiliate-web/shared/components/Footer.js";
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+class Footer extends _react.Component {
+    render() {
+        return _react2.default.createElement(
+            "footer",
+            { className: "page-footer text-center font-small mt-4 wow fadeIn", __self: this,
+                __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 6
+                }
+            },
+            _react2.default.createElement(
+                "div",
+                { className: "container text-center text-md-left pad-bottom", __self: this,
+                    __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 7
+                    }
+                },
+                _react2.default.createElement(
+                    "div",
+                    { className: "row text-center text-md-left mt-3 ml-lg-5 pb-3", __self: this,
+                        __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 8
+                        }
+                    },
+                    _react2.default.createElement(
+                        "div",
+                        { className: "col-md-3 col-lg-3 col-xl-3 mx-auto mt-3", __self: this,
+                            __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 9
+                            }
+                        },
+                        _react2.default.createElement(
+                            "h6",
+                            { className: "mb-4 font-weight-bold", __self: this,
+                                __source: {
+                                    fileName: _jsxFileName,
+                                    lineNumber: 10
+                                }
+                            },
+                            "Links"
+                        ),
+                        _react2.default.createElement(
+                            "p",
+                            {
+                                __self: this,
+                                __source: {
+                                    fileName: _jsxFileName,
+                                    lineNumber: 11
+                                }
+                            },
+                            _react2.default.createElement(
+                                "a",
+                                { href: "#!", __self: this,
+                                    __source: {
+                                        fileName: _jsxFileName,
+                                        lineNumber: 11
+                                    }
+                                },
+                                "Home"
+                            )
+                        ),
+                        _react2.default.createElement(
+                            "p",
+                            {
+                                __self: this,
+                                __source: {
+                                    fileName: _jsxFileName,
+                                    lineNumber: 12
+                                }
+                            },
+                            _react2.default.createElement(
+                                "a",
+                                { href: "#!", __self: this,
+                                    __source: {
+                                        fileName: _jsxFileName,
+                                        lineNumber: 12
+                                    }
+                                },
+                                "Company"
+                            )
+                        ),
+                        _react2.default.createElement(
+                            "p",
+                            {
+                                __self: this,
+                                __source: {
+                                    fileName: _jsxFileName,
+                                    lineNumber: 13
+                                }
+                            },
+                            _react2.default.createElement(
+                                "a",
+                                { href: "#!", __self: this,
+                                    __source: {
+                                        fileName: _jsxFileName,
+                                        lineNumber: 13
+                                    }
+                                },
+                                "About Us"
+                            )
+                        ),
+                        _react2.default.createElement(
+                            "p",
+                            {
+                                __self: this,
+                                __source: {
+                                    fileName: _jsxFileName,
+                                    lineNumber: 14
+                                }
+                            },
+                            _react2.default.createElement(
+                                "a",
+                                { href: "#!", __self: this,
+                                    __source: {
+                                        fileName: _jsxFileName,
+                                        lineNumber: 14
+                                    }
+                                },
+                                "Terms & Condition"
+                            )
+                        )
+                    ),
+                    _react2.default.createElement("hr", { className: "w-100 clearfix d-md-none", __self: this,
+                        __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 16
+                        }
+                    }),
+                    _react2.default.createElement(
+                        "div",
+                        { className: "col-md-3 col-lg-3 col-xl-3 mx-auto mt-3", __self: this,
+                            __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 17
+                            }
+                        },
+                        _react2.default.createElement(
+                            "h6",
+                            { className: "mb-4 font-weight-bold", __self: this,
+                                __source: {
+                                    fileName: _jsxFileName,
+                                    lineNumber: 18
+                                }
+                            },
+                            "Company"
+                        ),
+                        _react2.default.createElement(
+                            "p",
+                            {
+                                __self: this,
+                                __source: {
+                                    fileName: _jsxFileName,
+                                    lineNumber: 19
+                                }
+                            },
+                            _react2.default.createElement(
+                                "a",
+                                { href: "#!", __self: this,
+                                    __source: {
+                                        fileName: _jsxFileName,
+                                        lineNumber: 19
+                                    }
+                                },
+                                "Careers"
+                            )
+                        ),
+                        _react2.default.createElement(
+                            "p",
+                            {
+                                __self: this,
+                                __source: {
+                                    fileName: _jsxFileName,
+                                    lineNumber: 20
+                                }
+                            },
+                            _react2.default.createElement(
+                                "a",
+                                { href: "#!", __self: this,
+                                    __source: {
+                                        fileName: _jsxFileName,
+                                        lineNumber: 20
+                                    }
+                                },
+                                "Blog"
+                            )
+                        ),
+                        _react2.default.createElement(
+                            "p",
+                            {
+                                __self: this,
+                                __source: {
+                                    fileName: _jsxFileName,
+                                    lineNumber: 21
+                                }
+                            },
+                            _react2.default.createElement(
+                                "a",
+                                { href: "#!", __self: this,
+                                    __source: {
+                                        fileName: _jsxFileName,
+                                        lineNumber: 21
+                                    }
+                                },
+                                "Clients"
+                            )
+                        ),
+                        _react2.default.createElement(
+                            "p",
+                            {
+                                __self: this,
+                                __source: {
+                                    fileName: _jsxFileName,
+                                    lineNumber: 22
+                                }
+                            },
+                            _react2.default.createElement(
+                                "a",
+                                { href: "#!", __self: this,
+                                    __source: {
+                                        fileName: _jsxFileName,
+                                        lineNumber: 22
+                                    }
+                                },
+                                "Privacy Policy"
+                            )
+                        )
+                    ),
+                    _react2.default.createElement("hr", { className: "w-100 clearfix d-md-none", __self: this,
+                        __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 24
+                        }
+                    }),
+                    _react2.default.createElement(
+                        "div",
+                        { className: "col-md-3 col-lg-3 col-xl-3 mx-auto mt-3", __self: this,
+                            __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 25
+                            }
+                        },
+                        _react2.default.createElement(
+                            "h6",
+                            { className: "mb-4 font-weight-bold", __self: this,
+                                __source: {
+                                    fileName: _jsxFileName,
+                                    lineNumber: 26
+                                }
+                            },
+                            "Support"
+                        ),
+                        _react2.default.createElement(
+                            "p",
+                            {
+                                __self: this,
+                                __source: {
+                                    fileName: _jsxFileName,
+                                    lineNumber: 27
+                                }
+                            },
+                            _react2.default.createElement(
+                                "a",
+                                { href: "#!", __self: this,
+                                    __source: {
+                                        fileName: _jsxFileName,
+                                        lineNumber: 27
+                                    }
+                                },
+                                "Team"
+                            )
+                        ),
+                        _react2.default.createElement(
+                            "p",
+                            {
+                                __self: this,
+                                __source: {
+                                    fileName: _jsxFileName,
+                                    lineNumber: 28
+                                }
+                            },
+                            _react2.default.createElement(
+                                "a",
+                                { href: "#!", __self: this,
+                                    __source: {
+                                        fileName: _jsxFileName,
+                                        lineNumber: 28
+                                    }
+                                },
+                                "Blog"
+                            )
+                        ),
+                        _react2.default.createElement(
+                            "p",
+                            {
+                                __self: this,
+                                __source: {
+                                    fileName: _jsxFileName,
+                                    lineNumber: 29
+                                }
+                            },
+                            _react2.default.createElement(
+                                "a",
+                                { href: "#!", __self: this,
+                                    __source: {
+                                        fileName: _jsxFileName,
+                                        lineNumber: 29
+                                    }
+                                },
+                                "Clients"
+                            )
+                        ),
+                        _react2.default.createElement(
+                            "p",
+                            {
+                                __self: this,
+                                __source: {
+                                    fileName: _jsxFileName,
+                                    lineNumber: 30
+                                }
+                            },
+                            _react2.default.createElement(
+                                "a",
+                                { href: "#!", __self: this,
+                                    __source: {
+                                        fileName: _jsxFileName,
+                                        lineNumber: 30
+                                    }
+                                },
+                                "Privacy Policy"
+                            )
+                        )
+                    ),
+                    _react2.default.createElement("hr", { className: "w-100 clearfix d-md-none", __self: this,
+                        __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 32
+                        }
+                    }),
+                    _react2.default.createElement(
+                        "div",
+                        { className: "col-md-3 col-lg-3 col-xl-3 mx-auto mt-3", __self: this,
+                            __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 33
+                            }
+                        },
+                        _react2.default.createElement(
+                            "h6",
+                            { className: "mb-4 font-weight-bold", __self: this,
+                                __source: {
+                                    fileName: _jsxFileName,
+                                    lineNumber: 34
+                                }
+                            },
+                            "Contact"
+                        ),
+                        _react2.default.createElement(
+                            "p",
+                            {
+                                __self: this,
+                                __source: {
+                                    fileName: _jsxFileName,
+                                    lineNumber: 35
+                                }
+                            },
+                            "demo@mail.com"
+                        ),
+                        _react2.default.createElement(
+                            "p",
+                            {
+                                __self: this,
+                                __source: {
+                                    fileName: _jsxFileName,
+                                    lineNumber: 36
+                                }
+                            },
+                            "+ 01 234 567 88"
+                        ),
+                        _react2.default.createElement(
+                            "div",
+                            { className: "text-center text-md-left", __self: this,
+                                __source: {
+                                    fileName: _jsxFileName,
+                                    lineNumber: 37
+                                }
+                            },
+                            _react2.default.createElement(
+                                "ul",
+                                { className: "list-unstyled list-inline", __self: this,
+                                    __source: {
+                                        fileName: _jsxFileName,
+                                        lineNumber: 38
+                                    }
+                                },
+                                _react2.default.createElement(
+                                    "li",
+                                    { className: "list-inline-item", __self: this,
+                                        __source: {
+                                            fileName: _jsxFileName,
+                                            lineNumber: 39
+                                        }
+                                    },
+                                    _react2.default.createElement(
+                                        "a",
+                                        { className: "google btn-floating btn-sm mx-1", __self: this,
+                                            __source: {
+                                                fileName: _jsxFileName,
+                                                lineNumber: 39
+                                            }
+                                        },
+                                        _react2.default.createElement("i", { className: "fa fa-google-plus", __self: this,
+                                            __source: {
+                                                fileName: _jsxFileName,
+                                                lineNumber: 39
+                                            }
+                                        })
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    "li",
+                                    { className: "list-inline-item", __self: this,
+                                        __source: {
+                                            fileName: _jsxFileName,
+                                            lineNumber: 40
+                                        }
+                                    },
+                                    _react2.default.createElement(
+                                        "a",
+                                        { className: "facebook btn-floating btn-sm mx-1", __self: this,
+                                            __source: {
+                                                fileName: _jsxFileName,
+                                                lineNumber: 40
+                                            }
+                                        },
+                                        _react2.default.createElement("i", { className: "fa fa-facebook", __self: this,
+                                            __source: {
+                                                fileName: _jsxFileName,
+                                                lineNumber: 40
+                                            }
+                                        })
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    "li",
+                                    { className: "list-inline-item", __self: this,
+                                        __source: {
+                                            fileName: _jsxFileName,
+                                            lineNumber: 41
+                                        }
+                                    },
+                                    _react2.default.createElement(
+                                        "a",
+                                        { className: "linkedin btn-floating btn-sm mx-1", __self: this,
+                                            __source: {
+                                                fileName: _jsxFileName,
+                                                lineNumber: 41
+                                            }
+                                        },
+                                        _react2.default.createElement("i", { className: "fa fa-linkedin", __self: this,
+                                            __source: {
+                                                fileName: _jsxFileName,
+                                                lineNumber: 41
+                                            }
+                                        })
+                                    )
+                                )
+                            )
+                        )
+                    )
+                )
+            )
+        );
+    }
+}
+exports.default = Footer;
+
+/***/ }),
+/* 38 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _jsxFileName = '/home/b-rave/Documents/jalaj/test/affiliate-web/shared/components/Main.js';
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _Footer = __webpack_require__(37);
+
+var _Footer2 = _interopRequireDefault(_Footer);
+
+var _Header = __webpack_require__(35);
+
+var _Header2 = _interopRequireDefault(_Header);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1510,17 +3207,372 @@ class Main extends _react.Component {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 6
+          lineNumber: 8
         }
       },
-      this.props.children
+      _react2.default.createElement(_Header2.default, _extends({}, this.props, {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 9
+        }
+      })),
+      this.props.children,
+      _react2.default.createElement(_Footer2.default, _extends({}, this.props, {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 11
+        }
+      }))
     );
   }
 }
 exports.default = Main;
 
 /***/ }),
-/* 36 */
+/* 39 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+var _jsxFileName = "/home/b-rave/Documents/jalaj/test/affiliate-web/shared/components/Signup.js";
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+class Signup extends _react.Component {
+    render() {
+        return _react2.default.createElement(
+            "main",
+            {
+                __self: this,
+                __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 6
+                }
+            },
+            _react2.default.createElement(
+                "div",
+                { className: "container", __self: this,
+                    __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 7
+                    }
+                },
+                _react2.default.createElement(
+                    "section",
+                    { className: "mt-3 wow fadeIn", __self: this,
+                        __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 8
+                        }
+                    },
+                    _react2.default.createElement(
+                        "div",
+                        { className: "row", __self: this,
+                            __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 9
+                            }
+                        },
+                        _react2.default.createElement(
+                            "div",
+                            { className: "col-md-12 mb-4", __self: this,
+                                __source: {
+                                    fileName: _jsxFileName,
+                                    lineNumber: 10
+                                }
+                            },
+                            _react2.default.createElement(
+                                "h1",
+                                { className: "text-center py-4 color-primary mb-4", __self: this,
+                                    __source: {
+                                        fileName: _jsxFileName,
+                                        lineNumber: 11
+                                    }
+                                },
+                                "Sign Up"
+                            ),
+                            _react2.default.createElement(
+                                "div",
+                                { className: "card mx-xl-5", __self: this,
+                                    __source: {
+                                        fileName: _jsxFileName,
+                                        lineNumber: 12
+                                    }
+                                },
+                                _react2.default.createElement(
+                                    "div",
+                                    { className: "card-body mt-5", __self: this,
+                                        __source: {
+                                            fileName: _jsxFileName,
+                                            lineNumber: 13
+                                        }
+                                    },
+                                    _react2.default.createElement(
+                                        "form",
+                                        { action: "looking-for.html", __self: this,
+                                            __source: {
+                                                fileName: _jsxFileName,
+                                                lineNumber: 14
+                                            }
+                                        },
+                                        _react2.default.createElement(
+                                            "div",
+                                            { className: "row", __self: this,
+                                                __source: {
+                                                    fileName: _jsxFileName,
+                                                    lineNumber: 15
+                                                }
+                                            },
+                                            _react2.default.createElement(
+                                                "div",
+                                                { className: "col-md-6 mb-4", __self: this,
+                                                    __source: {
+                                                        fileName: _jsxFileName,
+                                                        lineNumber: 16
+                                                    }
+                                                },
+                                                _react2.default.createElement("input", { type: "text", id: "defaultFormCardNameEx", className: "form-control", __self: this,
+                                                    __source: {
+                                                        fileName: _jsxFileName,
+                                                        lineNumber: 17
+                                                    }
+                                                }),
+                                                _react2.default.createElement(
+                                                    "label",
+                                                    { "for": "defaultFormCardNameEx", className: "base-text font-weight-light mb-3", __self: this,
+                                                        __source: {
+                                                            fileName: _jsxFileName,
+                                                            lineNumber: 18
+                                                        }
+                                                    },
+                                                    "First Name"
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                "div",
+                                                { className: "col-md-6 mb-4", __self: this,
+                                                    __source: {
+                                                        fileName: _jsxFileName,
+                                                        lineNumber: 20
+                                                    }
+                                                },
+                                                _react2.default.createElement("input", { type: "text", id: "defaultFormCardNameEx", className: "form-control", __self: this,
+                                                    __source: {
+                                                        fileName: _jsxFileName,
+                                                        lineNumber: 21
+                                                    }
+                                                }),
+                                                _react2.default.createElement(
+                                                    "label",
+                                                    { "for": "defaultFormCardNameEx", className: "base-text font-weight-light mb-3", __self: this,
+                                                        __source: {
+                                                            fileName: _jsxFileName,
+                                                            lineNumber: 22
+                                                        }
+                                                    },
+                                                    "Last Name"
+                                                )
+                                            )
+                                        ),
+                                        _react2.default.createElement("br", {
+                                            __self: this,
+                                            __source: {
+                                                fileName: _jsxFileName,
+                                                lineNumber: 25
+                                            }
+                                        }),
+                                        _react2.default.createElement(
+                                            "div",
+                                            { className: "row", __self: this,
+                                                __source: {
+                                                    fileName: _jsxFileName,
+                                                    lineNumber: 26
+                                                }
+                                            },
+                                            _react2.default.createElement(
+                                                "div",
+                                                { className: "col-md-12 mb-4", __self: this,
+                                                    __source: {
+                                                        fileName: _jsxFileName,
+                                                        lineNumber: 27
+                                                    }
+                                                },
+                                                _react2.default.createElement("input", { type: "text", id: "defaultFormCardNameEx", className: "form-control", __self: this,
+                                                    __source: {
+                                                        fileName: _jsxFileName,
+                                                        lineNumber: 28
+                                                    }
+                                                }),
+                                                _react2.default.createElement(
+                                                    "label",
+                                                    { "for": "defaultFormCardNameEx", className: "base-text font-weight-light mb-3", __self: this,
+                                                        __source: {
+                                                            fileName: _jsxFileName,
+                                                            lineNumber: 29
+                                                        }
+                                                    },
+                                                    "User Name"
+                                                )
+                                            )
+                                        ),
+                                        _react2.default.createElement("br", {
+                                            __self: this,
+                                            __source: {
+                                                fileName: _jsxFileName,
+                                                lineNumber: 32
+                                            }
+                                        }),
+                                        _react2.default.createElement(
+                                            "div",
+                                            { className: "row", __self: this,
+                                                __source: {
+                                                    fileName: _jsxFileName,
+                                                    lineNumber: 33
+                                                }
+                                            },
+                                            _react2.default.createElement(
+                                                "div",
+                                                { className: "col-md-6 mb-4", __self: this,
+                                                    __source: {
+                                                        fileName: _jsxFileName,
+                                                        lineNumber: 34
+                                                    }
+                                                },
+                                                _react2.default.createElement("input", { type: "password", id: "defaultFormCardNameEx", className: "form-control", __self: this,
+                                                    __source: {
+                                                        fileName: _jsxFileName,
+                                                        lineNumber: 35
+                                                    }
+                                                }),
+                                                _react2.default.createElement(
+                                                    "label",
+                                                    { "for": "defaultFormCardNameEx", className: "base-text font-weight-light mb-3", __self: this,
+                                                        __source: {
+                                                            fileName: _jsxFileName,
+                                                            lineNumber: 36
+                                                        }
+                                                    },
+                                                    "Password"
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                "div",
+                                                { className: "col-md-6 mb-4", __self: this,
+                                                    __source: {
+                                                        fileName: _jsxFileName,
+                                                        lineNumber: 38
+                                                    }
+                                                },
+                                                _react2.default.createElement("input", { type: "password", id: "defaultFormCardNameEx", className: "form-control", __self: this,
+                                                    __source: {
+                                                        fileName: _jsxFileName,
+                                                        lineNumber: 39
+                                                    }
+                                                }),
+                                                _react2.default.createElement(
+                                                    "label",
+                                                    { "for": "defaultFormCardNameEx", className: "base-text font-weight-light mb-3", __self: this,
+                                                        __source: {
+                                                            fileName: _jsxFileName,
+                                                            lineNumber: 40
+                                                        }
+                                                    },
+                                                    "Repeat Password"
+                                                )
+                                            )
+                                        ),
+                                        _react2.default.createElement(
+                                            "div",
+                                            { className: "text-center py-4 mt-3", __self: this,
+                                                __source: {
+                                                    fileName: _jsxFileName,
+                                                    lineNumber: 43
+                                                }
+                                            },
+                                            _react2.default.createElement(
+                                                "button",
+                                                { className: "btn blue-gradient btn-rounded px-5 text-capitalize", type: "submit", __self: this,
+                                                    __source: {
+                                                        fileName: _jsxFileName,
+                                                        lineNumber: 44
+                                                    }
+                                                },
+                                                "Sign Up"
+                                            )
+                                        ),
+                                        _react2.default.createElement(
+                                            "p",
+                                            { className: "text-uppercase font-small grey-text text-right d-flex justify-content-center mb-3 pt-2", __self: this,
+                                                __source: {
+                                                    fileName: _jsxFileName,
+                                                    lineNumber: 46
+                                                }
+                                            },
+                                            " or Sign up with"
+                                        ),
+                                        _react2.default.createElement(
+                                            "div",
+                                            { className: "row my-3 d-flex justify-content-center", __self: this,
+                                                __source: {
+                                                    fileName: _jsxFileName,
+                                                    lineNumber: 47
+                                                }
+                                            },
+                                            _react2.default.createElement(
+                                                "button",
+                                                { type: "button", className: "btn btn-fb btn-rounded mr-md-3 z-depth-1a", __self: this,
+                                                    __source: {
+                                                        fileName: _jsxFileName,
+                                                        lineNumber: 48
+                                                    }
+                                                },
+                                                _react2.default.createElement("img", { width: "10", src: "../assets/images/Icon/facebook.png", __self: this,
+                                                    __source: {
+                                                        fileName: _jsxFileName,
+                                                        lineNumber: 48
+                                                    }
+                                                })
+                                            ),
+                                            _react2.default.createElement(
+                                                "button",
+                                                { type: "button", className: "btn btn-google btn-rounded ml-md-3 z-depth-1a", __self: this,
+                                                    __source: {
+                                                        fileName: _jsxFileName,
+                                                        lineNumber: 49
+                                                    }
+                                                },
+                                                _react2.default.createElement("img", { className: "google", width: "20", src: "../assets/images/Icon/google.png", __self: this,
+                                                    __source: {
+                                                        fileName: _jsxFileName,
+                                                        lineNumber: 49
+                                                    }
+                                                })
+                                            )
+                                        )
+                                    )
+                                )
+                            )
+                        )
+                    )
+                )
+            )
+        );
+    }
+}
+exports.default = Signup;
+
+/***/ }),
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1529,15 +3581,15 @@ exports.default = Main;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/home/b-rave/Documents/jalaj/Frontend-Development/server/middleware/reactApplication/ServerHTML.js'; /**
-                                                                                                                          * This module is responsible for generating the HTML page response for
-                                                                                                                          * the react application middleware.
-                                                                                                                          */
+var _jsxFileName = '/home/b-rave/Documents/jalaj/test/affiliate-web/server/middleware/reactApplication/ServerHTML.js'; /**
+                                                                                                                        * This module is responsible for generating the HTML page response for
+                                                                                                                        * the react application middleware.
+                                                                                                                        */
 
 /* eslint-disable react/no-danger */
 /* eslint-disable react/no-array-index-key */
 
-var _react = __webpack_require__(1);
+var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -1549,7 +3601,7 @@ var _serializeJavascript = __webpack_require__(13);
 
 var _serializeJavascript2 = _interopRequireDefault(_serializeJavascript);
 
-var _config = __webpack_require__(0);
+var _config = __webpack_require__(1);
 
 var _config2 = _interopRequireDefault(_config);
 
@@ -1561,15 +3613,15 @@ var _removeNil = __webpack_require__(12);
 
 var _removeNil2 = _interopRequireDefault(_removeNil);
 
-var _getClientBundleEntryAssets = __webpack_require__(37);
+var _getClientBundleEntryAssets = __webpack_require__(41);
 
 var _getClientBundleEntryAssets2 = _interopRequireDefault(_getClientBundleEntryAssets);
 
-var _ClientConfig = __webpack_require__(38);
+var _ClientConfig = __webpack_require__(42);
 
 var _ClientConfig2 = _interopRequireDefault(_ClientConfig);
 
-var _HTML = __webpack_require__(40);
+var _HTML = __webpack_require__(44);
 
 var _HTML2 = _interopRequireDefault(_HTML);
 
@@ -1705,7 +3757,7 @@ ServerHTML.propTypes = {
 exports.default = ServerHTML;
 
 /***/ }),
-/* 37 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1726,7 +3778,7 @@ var _appRootDir = __webpack_require__(3);
 
 var _appRootDir2 = _interopRequireDefault(_appRootDir);
 
-var _config = __webpack_require__(0);
+var _config = __webpack_require__(1);
 
 var _config2 = _interopRequireDefault(_config);
 
@@ -1775,7 +3827,7 @@ function getClientBundleEntryAssets() {
 }
 
 /***/ }),
-/* 38 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1784,9 +3836,9 @@ function getClientBundleEntryAssets() {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/home/b-rave/Documents/jalaj/Frontend-Development/config/components/ClientConfig.js';
+var _jsxFileName = '/home/b-rave/Documents/jalaj/test/affiliate-web/config/components/ClientConfig.js';
 
-var _react = __webpack_require__(1);
+var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -1798,7 +3850,7 @@ var _serializeJavascript = __webpack_require__(13);
 
 var _serializeJavascript2 = _interopRequireDefault(_serializeJavascript);
 
-var _filterWithRules = __webpack_require__(39);
+var _filterWithRules = __webpack_require__(43);
 
 var _filterWithRules2 = _interopRequireDefault(_filterWithRules);
 
@@ -1848,7 +3900,7 @@ ClientConfig.propTypes = {
 exports.default = ClientConfig;
 
 /***/ }),
-/* 39 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1911,7 +3963,7 @@ function filterWithRules(rules, obj) {
 }
 
 /***/ }),
-/* 40 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1923,10 +3975,10 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _jsxFileName = '/home/b-rave/Documents/jalaj/Frontend-Development/shared/components/HTML/index.js'; /* eslint-disable react/no-danger */
+var _jsxFileName = '/home/b-rave/Documents/jalaj/test/affiliate-web/shared/components/HTML/index.js'; /* eslint-disable react/no-danger */
 /* eslint-disable jsx-a11y/html-has-lang */
 
-var _react = __webpack_require__(1);
+var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -2002,7 +4054,7 @@ HTML.defaultProps = {
 exports.default = HTML;
 
 /***/ }),
-/* 41 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2012,19 +4064,19 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _uuid = __webpack_require__(42);
+var _uuid = __webpack_require__(46);
 
 var _uuid2 = _interopRequireDefault(_uuid);
 
-var _hpp = __webpack_require__(43);
+var _hpp = __webpack_require__(47);
 
 var _hpp2 = _interopRequireDefault(_hpp);
 
-var _helmet = __webpack_require__(44);
+var _helmet = __webpack_require__(48);
 
 var _helmet2 = _interopRequireDefault(_helmet);
 
-var _config = __webpack_require__(0);
+var _config = __webpack_require__(1);
 
 var _config2 = _interopRequireDefault(_config);
 
@@ -2038,14 +4090,17 @@ const cspConfig = {
     // implementation that is kinder to service workers please let me know.
     connectSrc: ['*'], // ["'self'", 'ws:'],
     defaultSrc: ["'self'"],
-    imgSrc: [" * 'self'"],
+    imgSrc: [" * 'self'",
+    // If you use Base64 encoded images (i.e. inlined images), then you will
+    // need the following:
+    'data:'],
     fontSrc: ["'self'", 'data:'],
     objectSrc: ["'self'"],
-    mediaSrc: ["'self'"],
+    mediaSrc: [" * 'self'"],
     manifestSrc: ["'self'"],
     scriptSrc: [
     // Allow scripts hosted from our application.
-    "'self'",
+    " * 'self'", 'https://platform.twitter.com/', "'unsafe-eval'", 'http://platform.instagram.com', 'https://cdn.syndication.twimg.com', 'https://platform.twitter.com',
     // Note: We will execution of any inline scripts that have the following
     // nonce identifier attached to them.
     // This is useful for guarding your application whilst allowing an inline
@@ -2057,9 +4112,10 @@ const cspConfig = {
     // recognise that we have also provided a nonce configuration and
     // use the stricter rule.
     "'unsafe-inline'"],
-    styleSrc: ["'self'",
+    styleSrc: ["'self'", 'https://platform.twitter.com/',
     // Webpack generates JS that loads our CSS, so this is needed:
-    "'unsafe-inline'", 'blob:']
+    "'unsafe-inline'", 'blob:'],
+    frameSrc: ['*']
   }
 };
 
@@ -2141,25 +4197,25 @@ _helmet2.default.contentSecurityPolicy(cspConfig)];
 exports.default = securityMiddleware;
 
 /***/ }),
-/* 42 */
+/* 46 */
 /***/ (function(module, exports) {
 
 module.exports = require("uuid");
 
 /***/ }),
-/* 43 */
+/* 47 */
 /***/ (function(module, exports) {
 
 module.exports = require("hpp");
 
 /***/ }),
-/* 44 */
+/* 48 */
 /***/ (function(module, exports) {
 
 module.exports = require("helmet");
 
 /***/ }),
-/* 45 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2179,7 +4235,7 @@ var _appRootDir = __webpack_require__(3);
 
 var _appRootDir2 = _interopRequireDefault(_appRootDir);
 
-var _config = __webpack_require__(0);
+var _config = __webpack_require__(1);
 
 var _config2 = _interopRequireDefault(_config);
 
@@ -2193,7 +4249,7 @@ exports.default = _express2.default.static((0, _path.resolve)(_appRootDir2.defau
 });
 
 /***/ }),
-/* 46 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2209,7 +4265,7 @@ var _appRootDir = __webpack_require__(3);
 
 var _appRootDir2 = _interopRequireDefault(_appRootDir);
 
-var _config = __webpack_require__(0);
+var _config = __webpack_require__(1);
 
 var _config2 = _interopRequireDefault(_config);
 
@@ -2223,7 +4279,7 @@ function serviceWorkerMiddleware(req, res, next) {
 exports.default = serviceWorkerMiddleware;
 
 /***/ }),
-/* 47 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2242,7 +4298,7 @@ var _appRootDir = __webpack_require__(3);
 
 var _appRootDir2 = _interopRequireDefault(_appRootDir);
 
-var _config = __webpack_require__(0);
+var _config = __webpack_require__(1);
 
 var _config2 = _interopRequireDefault(_config);
 
@@ -2281,7 +4337,7 @@ function offlinePageMiddleware(req, res, next) {
 }
 
 /***/ }),
-/* 48 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

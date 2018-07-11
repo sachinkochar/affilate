@@ -3,6 +3,8 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import Middle from './Middle';
+
 class Content extends Component {
   constructor() {
     super();
@@ -10,9 +12,7 @@ class Content extends Component {
   render() {
     return (
       <div>
-        <div className="row no_margin">
-          hello
-        </div>
+        <Middle />
       </div>
     );
   }

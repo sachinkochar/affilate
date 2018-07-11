@@ -1,6 +1,6 @@
 {
-  "name": "Frontend",
-  "version": "1.0",
+  "name": "Risorso-Frontend",
+  "version": "1.0.1",
   "main": "build/server/index.js",
   "engines": {
     "node": ">=6"

@@ -15,15 +15,20 @@ const cspConfig = {
       " * 'self'",
       // If you use Base64 encoded images (i.e. inlined images), then you will
       // need the following:
-      // 'data:',
+      'data:',
     ],
     fontSrc: ["'self'", 'data:'],
     objectSrc: ["'self'"],
-    mediaSrc: ["'self'"],
+    mediaSrc: [" * 'self'"],
     manifestSrc: ["'self'"],
     scriptSrc: [
       // Allow scripts hosted from our application.
-      "'self'",
+      " * 'self'",
+      'https://platform.twitter.com/',
+      "'unsafe-eval'",
+      'http://platform.instagram.com',
+      'https://cdn.syndication.twimg.com',
+      'https://platform.twitter.com',
       // Note: We will execution of any inline scripts that have the following
       // nonce identifier attached to them.
       // This is useful for guarding your application whilst allowing an inline
@@ -38,10 +43,12 @@ const cspConfig = {
     ],
     styleSrc: [
       "'self'",
+      'https://platform.twitter.com/',
       // Webpack generates JS that loads our CSS, so this is needed:
       "'unsafe-inline'",
       'blob:',
     ],
+    frameSrc: ['*'],
   },
 };
 
