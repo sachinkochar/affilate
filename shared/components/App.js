@@ -7,8 +7,20 @@ import Content from './Content';
 import config from '../../config';
 import Main from './Main';
 import Signup from './Signup';
+import LookingFor from './LookingFor';
+import BothBus from './BothBus';
+import OnBus from './OnBus';
+import OffBus from './OffBus';
+import PriceComp from './PriceComp';
+import Notification from './Notification';
+import Chat from './Chat';
+import Search from './Search';
+import Sales from './Sales';
 
 export default class App extends Component {
+  componentDidMount(){
+    new WOW().init();
+  }
   render() {
     return (
       <div id="row">
@@ -22,7 +34,7 @@ export default class App extends Component {
           <meta name="msapplication-TileColor" content="#2b2b2b" />
           <meta name="msapplication-TileImage" content="/favicons/mstile-144x144.png" />
           <meta name="theme-color" content="#2b2b2b" />
-          <link href="../assets/css/bootstrap.css" rel="stylesheet" />
+          {/* <link href="../assets/css/bootstrap.css" rel="stylesheet" /> */}
           <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
           <link href="../assets/css/mdb.css" rel="stylesheet" />
           <link href="../assets/css/mdb.min.css" rel="stylesheet" />
@@ -33,6 +45,7 @@ export default class App extends Component {
             href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
           />
           <link href="https://fonts.googleapis.com/css?family=Muli:400,600" rel="stylesheet" />
+          <script src="https://code.jquery.com/jquery-3.3.1.js" />
           <script src="../assets/js/bootstrap.js" />
           <script src="../assets/js/mdb.min.js" />
           <script src="../assets/js/popper.min.js" />
@@ -41,9 +54,18 @@ export default class App extends Component {
           </title>
         </Helmet>
         <Switch>
+          <Route exact path="/chat" render={props => <Chat {...props} />} />
           <Main>
             <Route exact path="/" render={props => <Content {...props} />} />
-            <Route exact path="/signup" render={props => <Signup {...props} />} />
+            <Route path="/signup" render={props => <Signup {...props} />} />
+            <Route path="/looking-for" render={props => <LookingFor {...props} />} />
+            <Route path="/online-bussiness" render={props => <OnBus {...props} />} />
+            <Route path="/offline-bussiness" render={props => <OffBus {...props} />} />
+            <Route path="/both-bussiness" render={props => <BothBus {...props} />} />
+            <Route path="/price-recom" render={props => <PriceComp {...props} />} />
+            <Route path="/notification" render={props => <Notification {...props} />} />
+            <Route path="/search" render={props => <Search {...props} />} />
+            <Route path="/sales" render={props => <Sales {...props} />} />
           </Main>
         </Switch>
       </div>
