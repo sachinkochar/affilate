@@ -1,16 +1,18 @@
 console.log('process.env.NODE_ENV', process.env.NODE_ENV);
 if (process.env.NODE_ENV === 'production') {
-  var url = {
-    liveURL: 'http://18.195.238.14:4001',
-    localURL: 'http://18.195.238.14:4001',
+  var configFiles = {
+   apiUrl: 'http://localhost:9000',
+   fbId: '194272327936106',
+   gooleId: '548645868132-n8rcc09datfhvikaprdcssl149ldncr6.apps.googleusercontent.com',
+   emailReg: /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
   };
   module.exports = { url };
 } else if (process.env.NODE_ENV === 'development') {
-  var url = {
-    liveURL: 'http://18.195.238.14:3000',
-    localURL: 'http://18.195.238.14:3000',
-    // liveURL: 'http://192.168.1.6:5000',
-    // localURL: 'http://192.168.1.6:5000',
-  };
-  module.exports = { url };
+  var configFiles = {
+    apiUrl: 'http://localhost:9000',
+    fbId: '194272327936106',
+    gooleId: '548645868132-n8rcc09datfhvikaprdcssl149ldncr6.apps.googleusercontent.com',
+    emailReg: /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
+   };
+  module.exports = { configFiles };
 }

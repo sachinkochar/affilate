@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import Switch from 'react-router-dom/Switch';
 import Route from 'react-router-dom/Route';
 import Helmet from 'react-helmet';
+import {ToastContainer} from 'react-toastify';
 import Content from './Content';
 import config from '../../config';
 import Main from './Main';
@@ -16,6 +17,8 @@ import Notification from './Notification';
 import Chat from './Chat';
 import Search from './Search';
 import Sales from './Sales';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 export default class App extends Component {
   componentDidMount(){
@@ -53,6 +56,7 @@ export default class App extends Component {
             {config('htmlPage.defaultTitle')}{' '}
           </title>
         </Helmet>
+        <ToastContainer autoClose={2000} />
         <Switch>
           <Route exact path="/chat" render={props => <Chat {...props} />} />
           <Main>
