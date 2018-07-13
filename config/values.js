@@ -33,7 +33,7 @@ const values = {
   apiUrl: EnvVars.string('API_URL', 'localhost'),
 
   // The port on which the client bundle development server should run.
-  clientDevServerPort: EnvVars.number('CLIENT_DEV_PORT', 3001),
+  clientDevServerPort: EnvVars.number('CLIENT_DEV_PORT', 3002),
 
   // This is an example environment variable which is used within the react
   // application to demonstrate the usage of environment variables across
@@ -72,8 +72,8 @@ const values = {
   // We make use of react-helmet to consume the values below.
   // @see https://github.com/nfl/react-helmet
   htmlPage: {
-    titleTemplate: 'React SSR, %s',
-    defaultTitle: 'React SSR,',
+    titleTemplate: 'RisorsoHomePage, %s',
+    defaultTitle: 'Risorso',
 
     description: '',
     defaultCss: './shared/index.css',
