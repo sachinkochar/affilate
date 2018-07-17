@@ -1,8 +1,51 @@
 import React, { Component } from 'react'
 import Image from './common/Image';
 import GradButton from './common/GradButton';
+import { connect } from 'react-redux';
+import { _searchAction, _searchFilterAction } from '../actions/search'
+import { _tagsAction } from '../actions/tags'
+import SearchCard from './common/SearchCard'
 
-export default class Search extends Component {
+class Search extends Component {
+constructor(props){
+    super(props);
+    this.state={
+        tags:[]
+    }
+    this.handleClick= this.handleClick.bind(this)
+    this.handleTagDelete= this.handleTagDelete.bind(this)
+}
+componentDidMount(){
+    this.props._search();
+    this.props._tags();
+}
+componentWillReceiveProps(props,nextProps){
+    console.log(props,'props');
+    console.log(nextProps,'nextProps');
+}
+
+handleClick(tag) {
+    console.log(tag)
+    var tags = this.state.tags;
+    if(tags.indexOf(tag) < 0){
+        tags.push(tag);
+        this.props._filter(tags)
+    }
+}
+
+handleTagDelete(tag) {
+    console.log(tag)
+    var tags = this.state.tags;
+    var tag_index= tags.indexOf(tag)
+    tags.splice(tag_index,1)
+    this.setState({ tags:tags })
+    if(tags.length > 0){
+        this.props._filter(tags)
+    }else{
+        this.props._search()
+    }
+}
+
   render() {
     return (
         <main>
@@ -14,88 +57,54 @@ export default class Search extends Component {
                             <h5 className="text-center base-text mb-5">Blog , Website , E - Commerce Store</h5>
                             <div className="row">
                                 <div className="col-md-8 offset-md-2 form-inline py-0 px-0 search-inbox search-big-btn">
-                                    <Image class="ml-3" width="30" src="../assets/images/Icon/search.png" /><input className="form-control search-box" type="text " placeholder="Search " aria-label="Search " value="   " mdbInputDirective/>
-                                    <span className="tags">Tesla <Image class="ml-2" src="../assets/images/Icon/close.png"/></span>
+                                    <Image class="ml-3" width="30" src="../assets/images/Icon/search.png" />
+                                    {/* <input className="form-control search-box" type="text " placeholder="Search" name="search_text" aria-label="Search"  mdbInputDirective/> */}
+                                    { this.state.tags.map( (tag,i) => {
+                                        return(
+                                            <span className="tags" key={ i } onClick={ this.handleTagDelete.bind(this,tag) }>{ tag }<Image class="ml-2" src="../assets/images/Icon/close.png" /></span>
+                                        )
+                                    } ) }
+                                    {/* <span><a className="btn-tags page-link" mdbWavesEffect>Blog</a><Image class="ml-2" src="../assets/images/Icon/close.png"/></span> */}
+                                    {/* <span><a className="btn-tags page-link" mdbWavesEffect>Insurance</a></span> */}
                                 </div>
                             </div>
 
                             <div className="row">
                                 <div className="col-md-8 offset-md-2 form-inline py-0 px-0 pt-3 pb-5">
-                                    <a className="btn-tags page-link" mdbWavesEffect>Blog</a>
-                                    <a className="btn-tags page-link" mdbWavesEffect>Website</a>
-                                    <a className="btn-tags page-link" mdbWavesEffect>E-commerce</a>
-                                    <a className="btn-tags page-link" mdbWavesEffect>Blog</a>
-                                    <a className="btn-tags page-link" mdbWavesEffect>blog</a>
-                                    <a className="btn-tags page-link" mdbWavesEffect>Website</a>
-                                    <a className="btn-tags page-link" mdbWavesEffect>Website</a>
-                                    <a className="btn-tags page-link" mdbWavesEffect>E-commerce</a>
+                                {this.props.Search_data.tags.tags_data.length > 0 && (
+                                    this.props.Search_data.tags.tags_data.map( ( tag,i ) => {
+                                        return (
+                                            <a className="btn-tags page-link" key={i} onClick={ this.handleClick.bind(this,tag) }  mdbWavesEffect>{ tag }</a>
+                                        )
+                                    } )
+                                )}
                                 </div>
                             </div>
+                            {Array.isArray(this.props.Search_data.search.search_data) === true &&this.props.Search_data.search.search_data.length > 0 && (
 
-                            <div className="card rounded mb-4">
-                                <div className="row card-body mx-5 mb-4">
-                                    <div className="col-md-5 offset-md-1 align-middle">
-                                        <h5 className="mt-3 mb-3">www.xyz.com </h5>
-                                        <p>Credibility - 97 % <br/> User Trust - 89 % <br/> Brand value - Good </p>
-                                        <p className="color-primary">Expected Profit - 72 $</p>
-                                    </div>
-                                    <div className="col-md-5 offset-md-1 align-middle">
-                                        <h5 className="mt-3 mb-3">Blog Sub.- Insurance </h5>
-                                        <p>Price - 8 $ / Sale<br/> Request for 8 $ / Sale</p>
-                                        <p className="color-primary">Expected Sales - 99 $ / Month</p>
-                                        <a className="btn-request page-link" mdbWavesEffect>Request</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="card rounded mb-4">
-                                <div className="row card-body mx-5 mb-4">
-                                    <div className="col-md-5 offset-md-1 align-middle">
-                                        <h5 className="mt-3 mb-3">www.xyz.com </h5>
-                                        <p>Credibility - 97 % <br/> User Trust - 89 % <br/> Brand value - Good </p>
-                                        <p className="color-primary">Expected Profit - 72 $</p>
-                                    </div>
-                                    <div className="col-md-5 offset-md-1 align-middle">
-                                        <h5 className="mt-3 mb-3">Blog Sub.- Insurance </h5>
-                                        <p>Price - 8 $ / Sale<br/> Request for 8 $ / Sale</p>
-                                        <p className="color-primary">Expected Sales - 99 $ / Month</p>
-                                        <a className="btn-request page-link" mdbWavesEffect>Request</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="card rounded mb-4">
-                                <div className="row card-body mx-5 mb-4">
-                                    <div className="col-md-5 offset-md-1 align-middle">
-                                        <h5 className="mt-3 mb-3">www.xyz.com </h5>
-                                        <p>Credibility - 97 % <br/> User Trust - 89 % <br/> Brand value - Good </p>
-                                        <p className="color-primary">Expected Profit - 72 $</p>
-                                    </div>
-                                    <div className="col-md-5 offset-md-1 align-middle">
-                                        <h5 className="mt-3 mb-3">Blog Sub.- Insurance </h5>
-                                        <p>Price - 8 $ / Sale<br/> Request for 8 $ / Sale</p>
-                                        <p className="color-primary">Expected Sales - 99 $ / Month</p>
-                                        <a className="btn-request page-link" mdbWavesEffect>Request</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="card rounded mb-4">
-                                <div className="row card-body mx-5 mb-4">
-                                    <div className="col-md-5 offset-md-1 align-middle">
-                                        <h5 className="mt-3 mb-3">www.xyz.com </h5>
-                                        <p>Credibility - 97 % <br/> User Trust - 89 % <br/> Brand value - Good </p>
-                                        <p className="color-primary">Expected Profit - 72 $</p>
-                                    </div>
-                                    <div className="col-md-5 offset-md-1 align-middle">
-                                        <h5 className="mt-3 mb-3">Blog Sub.- Insurance </h5>
-                                        <p>Price - 8 $ / Sale<br/> Request for 8 $ / Sale</p>
-                                        <p className="color-primary">Expected Sales - 99 $ / Month</p>
-                                        <a className="btn-request page-link" mdbWavesEffect>Request</a>
-                                    </div>
-                                </div>
-                            </div>
-
+                                this.props.Search_data.search.search_data.map(( details,i )=>{
+                                    return(
+                                    <SearchCard 
+                                        key={ i }
+                                        title={ details.title }
+                                        credibility={ details.credibility }
+                                        user_trust={ details.user_trust }
+                                        brand_value={ details.brand_value }
+                                        expected_profit={ details.expected_profit }
+                                        expected_sales={ details.expected_sales }
+                                        subject={ details.subject }
+                                        price={ details.price }
+                                        request_for={ details.request_for }
+                                    />
+                                )
+                            })
+                            )}
+                            {this.props.Search_data.search.search_data === "loading" &&
+                             (
+                                <div className="text-center">Loading....</div>
+                            )
+                            }
+                    
                             <div className="row">
                                 <div className="col-md-4 mt-2">
                                     <h5 className="font-weight-bold">Showing <strong>0-5 out of 24</strong></h5>
@@ -142,3 +151,24 @@ export default class Search extends Component {
     )
   }
 }
+
+function mapStateToProps(state) {
+    const Search_data = state;
+    console.log("State", Search_data);
+    return { Search_data };
+  }
+  function mapDispatchToProps(dispatch, props) {
+    return {
+      _search: () => {
+        dispatch(_searchAction());
+      },
+      _tags: () => {
+        dispatch(_tagsAction())
+      },
+      _filter: (tags) => {
+        dispatch(_searchFilterAction(tags))
+      }
+    }
+  }
+
+export default connect(mapStateToProps, mapDispatchToProps)(Search)

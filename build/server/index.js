@@ -62,7 +62,7 @@ module.exports =
 /******/ 	__webpack_require__.p = "http://localhost:3001/client/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 23);
+/******/ 	return __webpack_require__(__webpack_require__.s = 24);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -121,7 +121,7 @@ function resolveConfigForBrowserOrServer() {
   if (true) {
     // i.e. running in our server/node process.
     // eslint-disable-next-line global-require
-    configCache = __webpack_require__(18).default;
+    configCache = __webpack_require__(19).default;
     return configCache;
   }
 
@@ -201,7 +201,7 @@ function configGet(path) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/home/b-rave/Documents/jalaj/test/affiliate-web/shared/components/common/Paragraph.js';
+var _jsxFileName = '/home/rnf-52/Documents/Sachin/tasks/web/affiliate-web/shared/components/common/Paragraph.js';
 
 var _react = __webpack_require__(0);
 
@@ -235,7 +235,7 @@ exports.default = Paragraph;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = "/home/b-rave/Documents/jalaj/test/affiliate-web/shared/components/common/GradButton.js";
+var _jsxFileName = "/home/rnf-52/Documents/Sachin/tasks/web/affiliate-web/shared/components/common/GradButton.js";
 
 var _react = __webpack_require__(0);
 
@@ -270,7 +270,7 @@ exports.default = GradButton;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/home/b-rave/Documents/jalaj/test/affiliate-web/shared/components/common/Image.js';
+var _jsxFileName = '/home/rnf-52/Documents/Sachin/tasks/web/affiliate-web/shared/components/common/Image.js';
 
 var _react = __webpack_require__(0);
 
@@ -324,7 +324,7 @@ module.exports = require("react-redux");
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = "/home/b-rave/Documents/jalaj/test/affiliate-web/shared/components/common/InputText.js";
+var _jsxFileName = "/home/rnf-52/Documents/Sachin/tasks/web/affiliate-web/shared/components/common/InputText.js";
 
 var _react = __webpack_require__(0);
 
@@ -380,7 +380,7 @@ exports.default = InputText;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/home/b-rave/Documents/jalaj/test/affiliate-web/shared/components/common/Label.js';
+var _jsxFileName = '/home/rnf-52/Documents/Sachin/tasks/web/affiliate-web/shared/components/common/Label.js';
 
 var _react = __webpack_require__(0);
 
@@ -408,13 +408,37 @@ exports.default = Label;
 /* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
+console.log('process.env.NODE_ENV', "development");
+if (false) {
+  var configFiles = {
+   apiUrl: 'http://localhost:9000',
+   fbId: '194272327936106',
+   gooleId: '548645868132-n8rcc09datfhvikaprdcssl149ldncr6.apps.googleusercontent.com',
+   emailReg: /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
+  };
+  module.exports = { url };
+} else if (true) {
+  var configFiles = {
+    apiUrl: 'http://localhost:9000',
+    fbId: '194272327936106',
+    gooleId: '548645868132-n8rcc09datfhvikaprdcssl149ldncr6.apps.googleusercontent.com',
+    emailReg: /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
+   };
+  module.exports = { configFiles };
+}
+
+
+/***/ }),
+/* 12 */
+/***/ (function(module, exports, __webpack_require__) {
+
 "use strict";
 
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/home/b-rave/Documents/jalaj/test/affiliate-web/shared/components/common/TextArea.js';
+var _jsxFileName = '/home/rnf-52/Documents/Sachin/tasks/web/affiliate-web/shared/components/common/TextArea.js';
 
 var _react = __webpack_require__(0);
 
@@ -435,13 +459,13 @@ class TextArea extends _react.Component {
 exports.default = TextArea;
 
 /***/ }),
-/* 12 */
+/* 13 */
 /***/ (function(module, exports) {
 
 module.exports = require("fs");
 
 /***/ }),
-/* 13 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -450,7 +474,7 @@ module.exports = require("fs");
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = "/home/b-rave/Documents/jalaj/test/affiliate-web/shared/components/common/Select.js";
+var _jsxFileName = "/home/rnf-52/Documents/Sachin/tasks/web/affiliate-web/shared/components/common/Select.js";
 
 var _react = __webpack_require__(0);
 
@@ -487,31 +511,31 @@ class Select extends _react.Component {
 exports.default = Select;
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, exports) {
 
 module.exports = require("prop-types");
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports) {
 
 module.exports = require("express");
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-helmet");
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports) {
 
 module.exports = require("redux");
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -521,7 +545,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _envVars = __webpack_require__(36);
+var _envVars = __webpack_require__(39);
 
 var EnvVars = _interopRequireWildcard(_envVars);
 
@@ -820,7 +844,7 @@ if (false) {
 exports.default = values;
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -853,7 +877,7 @@ function ifElse(condition) {
 }
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -875,44 +899,26 @@ function removeNil(as) {
 }
 
 /***/ }),
-/* 21 */
-/***/ (function(module, exports, __webpack_require__) {
+/* 22 */
+/***/ (function(module, exports) {
 
-console.log('process.env.NODE_ENV', "development");
-if (false) {
-  var configFiles = {
-   apiUrl: 'http://localhost:9000',
-   fbId: '194272327936106',
-   gooleId: '548645868132-n8rcc09datfhvikaprdcssl149ldncr6.apps.googleusercontent.com',
-   emailReg: /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
-  };
-  module.exports = { url };
-} else if (true) {
-  var configFiles = {
-    apiUrl: 'http://localhost:9000',
-    fbId: '194272327936106',
-    gooleId: '548645868132-n8rcc09datfhvikaprdcssl149ldncr6.apps.googleusercontent.com',
-    emailReg: /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
-   };
-  module.exports = { configFiles };
-}
-
+module.exports = require("react-toastify");
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, exports) {
 
 module.exports = require("serialize-javascript");
 
 /***/ }),
-/* 23 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(24);
+module.exports = __webpack_require__(25);
 
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -922,11 +928,11 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _express = __webpack_require__(15);
+var _express = __webpack_require__(16);
 
 var _express2 = _interopRequireDefault(_express);
 
-var _compression = __webpack_require__(25);
+var _compression = __webpack_require__(26);
 
 var _compression2 = _interopRequireDefault(_compression);
 
@@ -936,27 +942,27 @@ var _appRootDir = __webpack_require__(7);
 
 var _appRootDir2 = _interopRequireDefault(_appRootDir);
 
-var _reactApplication = __webpack_require__(26);
+var _reactApplication = __webpack_require__(27);
 
 var _reactApplication2 = _interopRequireDefault(_reactApplication);
 
-var _security = __webpack_require__(69);
+var _security = __webpack_require__(76);
 
 var _security2 = _interopRequireDefault(_security);
 
-var _clientBundle = __webpack_require__(73);
+var _clientBundle = __webpack_require__(80);
 
 var _clientBundle2 = _interopRequireDefault(_clientBundle);
 
-var _serviceWorker = __webpack_require__(74);
+var _serviceWorker = __webpack_require__(81);
 
 var _serviceWorker2 = _interopRequireDefault(_serviceWorker);
 
-var _offlinePage = __webpack_require__(75);
+var _offlinePage = __webpack_require__(82);
 
 var _offlinePage2 = _interopRequireDefault(_offlinePage);
 
-var _errorHandlers = __webpack_require__(76);
+var _errorHandlers = __webpack_require__(83);
 
 var _errorHandlers2 = _interopRequireDefault(_errorHandlers);
 
@@ -1009,13 +1015,13 @@ const listener = app.listen((0, _config2.default)('port'), () => console.log(`Se
 exports.default = listener;
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, exports) {
 
 module.exports = require("compression");
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1024,32 +1030,32 @@ module.exports = require("compression");
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/home/b-rave/Documents/jalaj/test/affiliate-web/server/middleware/reactApplication/index.js';
+var _jsxFileName = '/home/rnf-52/Documents/Sachin/tasks/web/affiliate-web/server/middleware/reactApplication/index.js';
 exports.default = reactApplicationMiddleware;
 
 var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _server = __webpack_require__(27);
+var _server = __webpack_require__(28);
 
 var _reactRouterDom = __webpack_require__(5);
 
-var _reactAsyncComponent = __webpack_require__(28);
+var _reactAsyncComponent = __webpack_require__(29);
 
-var _reactJobs = __webpack_require__(29);
+var _reactJobs = __webpack_require__(30);
 
-var _reactAsyncBootstrapper = __webpack_require__(30);
+var _reactAsyncBootstrapper = __webpack_require__(31);
 
 var _reactAsyncBootstrapper2 = _interopRequireDefault(_reactAsyncBootstrapper);
 
 var _reactRedux = __webpack_require__(8);
 
-var _reactHelmet = __webpack_require__(16);
+var _reactHelmet = __webpack_require__(17);
 
 var _reactHelmet2 = _interopRequireDefault(_reactHelmet);
 
-var _configureStore = __webpack_require__(31);
+var _configureStore = __webpack_require__(32);
 
 var _configureStore2 = _interopRequireDefault(_configureStore);
 
@@ -1057,11 +1063,11 @@ var _config = __webpack_require__(1);
 
 var _config2 = _interopRequireDefault(_config);
 
-var _App = __webpack_require__(39);
+var _App = __webpack_require__(42);
 
 var _App2 = _interopRequireDefault(_App);
 
-var _ServerHTML = __webpack_require__(64);
+var _ServerHTML = __webpack_require__(71);
 
 var _ServerHTML2 = _interopRequireDefault(_ServerHTML);
 
@@ -1192,31 +1198,31 @@ function reactApplicationMiddleware(request, response) {
 }
 
 /***/ }),
-/* 27 */
+/* 28 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-dom/server");
 
 /***/ }),
-/* 28 */
+/* 29 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-async-component");
 
 /***/ }),
-/* 29 */
+/* 30 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-jobs");
 
 /***/ }),
-/* 30 */
+/* 31 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-async-bootstrapper");
 
 /***/ }),
-/* 31 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1226,17 +1232,17 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _redux = __webpack_require__(17);
+var _redux = __webpack_require__(18);
 
-var _reduxThunk = __webpack_require__(32);
+var _reduxThunk = __webpack_require__(33);
 
 var _reduxThunk2 = _interopRequireDefault(_reduxThunk);
 
-var _axios = __webpack_require__(33);
+var _axios = __webpack_require__(34);
 
 var _axios2 = _interopRequireDefault(_axios);
 
-var _reducers = __webpack_require__(34);
+var _reducers = __webpack_require__(35);
 
 var _reducers2 = _interopRequireDefault(_reducers);
 
@@ -1297,19 +1303,19 @@ function configureStore(initialState) {
 exports.default = configureStore;
 
 /***/ }),
-/* 32 */
+/* 33 */
 /***/ (function(module, exports) {
 
 module.exports = require("redux-thunk");
 
 /***/ }),
-/* 33 */
+/* 34 */
 /***/ (function(module, exports) {
 
 module.exports = require("axios");
 
 /***/ }),
-/* 34 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1319,22 +1325,32 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _redux = __webpack_require__(17);
+var _redux = __webpack_require__(18);
 
-var _test = __webpack_require__(35);
+var _test = __webpack_require__(36);
 
 var _test2 = _interopRequireDefault(_test);
+
+var _search = __webpack_require__(37);
+
+var _search2 = _interopRequireDefault(_search);
+
+var _tags = __webpack_require__(38);
+
+var _tags2 = _interopRequireDefault(_tags);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const rootReducer = (0, _redux.combineReducers)({
-  test: _test2.default
+  test: _test2.default,
+  search: _search2.default,
+  tags: _tags2.default
 });
 
 exports.default = rootReducer;
 
 /***/ }),
-/* 35 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1371,7 +1387,83 @@ function test(state = initialState, action) {
 }
 
 /***/ }),
-/* 36 */
+/* 37 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = test;
+// import { LOGIN, ERROR, FORGETPASSWORD } from '../actions/login_action';
+
+const initialState = {
+  search_data: ''
+};
+
+// receiving response sent by action according to type of action
+function test(state = initialState, action) {
+  console.log(action, 'action');
+  switch (action.type) {
+    case 'SEARCHSUCCESS':
+      return { search_data: action.payload };
+      break;
+
+    case 'SEARCHERROR':
+      return { search_data: action.payload };
+      break;
+
+    case 'SEARCHREQUEST':
+      return { search_data: action.message };
+      break;
+
+    default:
+      return state;
+  }
+}
+
+/***/ }),
+/* 38 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = test;
+// import { LOGIN, ERROR, FORGETPASSWORD } from '../actions/login_action';
+
+const initialState = {
+  tags_data: ''
+};
+
+// receiving response sent by action according to type of action
+function test(state = initialState, action) {
+  console.log(action, 'action');
+  switch (action.type) {
+    case 'TAGSSUCCESS':
+      return { tags_data: action.payload };
+      break;
+
+    case 'TAGSERROR':
+      return { tags_data: action.payload };
+      break;
+
+    case 'TAGSREQUEST':
+      return { tags_data: action.message };
+      break;
+
+    default:
+      return state;
+  }
+}
+
+/***/ }),
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1388,15 +1480,15 @@ var _appRootDir = __webpack_require__(7);
 
 var _appRootDir2 = _interopRequireDefault(_appRootDir);
 
-var _safe = __webpack_require__(37);
+var _safe = __webpack_require__(40);
 
 var _safe2 = _interopRequireDefault(_safe);
 
-var _dotenv = __webpack_require__(38);
+var _dotenv = __webpack_require__(41);
 
 var _dotenv2 = _interopRequireDefault(_dotenv);
 
-var _fs = __webpack_require__(12);
+var _fs = __webpack_require__(13);
 
 var _fs2 = _interopRequireDefault(_fs);
 
@@ -1404,11 +1496,11 @@ var _path = __webpack_require__(6);
 
 var _path2 = _interopRequireDefault(_path);
 
-var _ifElse = __webpack_require__(19);
+var _ifElse = __webpack_require__(20);
 
 var _ifElse2 = _interopRequireDefault(_ifElse);
 
-var _removeNil = __webpack_require__(20);
+var _removeNil = __webpack_require__(21);
 
 var _removeNil2 = _interopRequireDefault(_removeNil);
 
@@ -1486,19 +1578,19 @@ function bool(name, defaultVal) {
 }
 
 /***/ }),
-/* 37 */
+/* 40 */
 /***/ (function(module, exports) {
 
 module.exports = require("colors/safe");
 
 /***/ }),
-/* 38 */
+/* 41 */
 /***/ (function(module, exports) {
 
 module.exports = require("dotenv");
 
 /***/ }),
-/* 39 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1510,7 +1602,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _jsxFileName = '/home/b-rave/Documents/jalaj/test/affiliate-web/shared/components/App.js';
+var _jsxFileName = '/home/rnf-52/Documents/Sachin/tasks/web/affiliate-web/shared/components/App.js';
 
 var _react = __webpack_require__(0);
 
@@ -1518,21 +1610,21 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRedux = __webpack_require__(8);
 
-var _Switch = __webpack_require__(40);
+var _Switch = __webpack_require__(43);
 
 var _Switch2 = _interopRequireDefault(_Switch);
 
-var _Route = __webpack_require__(41);
+var _Route = __webpack_require__(44);
 
 var _Route2 = _interopRequireDefault(_Route);
 
-var _reactHelmet = __webpack_require__(16);
+var _reactHelmet = __webpack_require__(17);
 
 var _reactHelmet2 = _interopRequireDefault(_reactHelmet);
 
-var _reactToastify = __webpack_require__(42);
+var _reactToastify = __webpack_require__(22);
 
-var _Content = __webpack_require__(43);
+var _Content = __webpack_require__(45);
 
 var _Content2 = _interopRequireDefault(_Content);
 
@@ -1540,51 +1632,51 @@ var _config = __webpack_require__(1);
 
 var _config2 = _interopRequireDefault(_config);
 
-var _Main = __webpack_require__(45);
+var _Main = __webpack_require__(47);
 
 var _Main2 = _interopRequireDefault(_Main);
 
-var _Signup = __webpack_require__(48);
+var _Signup = __webpack_require__(50);
 
 var _Signup2 = _interopRequireDefault(_Signup);
 
-var _LookingFor = __webpack_require__(52);
+var _LookingFor = __webpack_require__(54);
 
 var _LookingFor2 = _interopRequireDefault(_LookingFor);
 
-var _BothBus = __webpack_require__(53);
+var _BothBus = __webpack_require__(55);
 
 var _BothBus2 = _interopRequireDefault(_BothBus);
 
-var _OnBus = __webpack_require__(54);
+var _OnBus = __webpack_require__(56);
 
 var _OnBus2 = _interopRequireDefault(_OnBus);
 
-var _OffBus = __webpack_require__(55);
+var _OffBus = __webpack_require__(57);
 
 var _OffBus2 = _interopRequireDefault(_OffBus);
 
-var _PriceComp = __webpack_require__(56);
+var _PriceComp = __webpack_require__(58);
 
 var _PriceComp2 = _interopRequireDefault(_PriceComp);
 
-var _Notification = __webpack_require__(60);
+var _Notification = __webpack_require__(62);
 
 var _Notification2 = _interopRequireDefault(_Notification);
 
-var _Chat = __webpack_require__(61);
+var _Chat = __webpack_require__(63);
 
 var _Chat2 = _interopRequireDefault(_Chat);
 
-var _Search = __webpack_require__(62);
+var _Search = __webpack_require__(64);
 
 var _Search2 = _interopRequireDefault(_Search);
 
-var _Sales = __webpack_require__(63);
+var _Sales = __webpack_require__(69);
 
 var _Sales2 = _interopRequireDefault(_Sales);
 
-__webpack_require__(77);
+__webpack_require__(70);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1910,25 +2002,19 @@ class App extends _react.Component {
 exports.default = App;
 
 /***/ }),
-/* 40 */
+/* 43 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-router-dom/Switch");
 
 /***/ }),
-/* 41 */
+/* 44 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-router-dom/Route");
 
 /***/ }),
-/* 42 */
-/***/ (function(module, exports) {
-
-module.exports = require("react-toastify");
-
-/***/ }),
-/* 43 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1937,7 +2023,7 @@ module.exports = require("react-toastify");
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/home/b-rave/Documents/jalaj/test/affiliate-web/shared/components/Content.js'; // Component containing all the components rendering,
+var _jsxFileName = '/home/rnf-52/Documents/Sachin/tasks/web/affiliate-web/shared/components/Content.js'; // Component containing all the components rendering,
 // of all child Routes.
 
 var _react = __webpack_require__(0);
@@ -1946,7 +2032,7 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRedux = __webpack_require__(8);
 
-var _Middle = __webpack_require__(44);
+var _Middle = __webpack_require__(46);
 
 var _Middle2 = _interopRequireDefault(_Middle);
 
@@ -1988,7 +2074,7 @@ function mapDispatchToProps(dispatch) {
 exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(Content);
 
 /***/ }),
-/* 44 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1997,7 +2083,7 @@ exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = "/home/b-rave/Documents/jalaj/test/affiliate-web/shared/components/Middle.js";
+var _jsxFileName = "/home/rnf-52/Documents/Sachin/tasks/web/affiliate-web/shared/components/Middle.js";
 
 var _react = __webpack_require__(0);
 
@@ -2816,7 +2902,7 @@ class Middle extends _react.Component {
 exports.default = Middle;
 
 /***/ }),
-/* 45 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2828,17 +2914,17 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _jsxFileName = '/home/b-rave/Documents/jalaj/test/affiliate-web/shared/components/Main.js';
+var _jsxFileName = '/home/rnf-52/Documents/Sachin/tasks/web/affiliate-web/shared/components/Main.js';
 
 var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _Footer = __webpack_require__(46);
+var _Footer = __webpack_require__(48);
 
 var _Footer2 = _interopRequireDefault(_Footer);
 
-var _Header = __webpack_require__(47);
+var _Header = __webpack_require__(49);
 
 var _Header2 = _interopRequireDefault(_Header);
 
@@ -2877,7 +2963,7 @@ class Main extends _react.Component {
 exports.default = Main;
 
 /***/ }),
-/* 46 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2886,7 +2972,7 @@ exports.default = Main;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/home/b-rave/Documents/jalaj/test/affiliate-web/shared/components/Footer.js';
+var _jsxFileName = '/home/rnf-52/Documents/Sachin/tasks/web/affiliate-web/shared/components/Footer.js';
 
 var _react = __webpack_require__(0);
 
@@ -3200,7 +3286,7 @@ class Footer extends _react.Component {
 exports.default = Footer;
 
 /***/ }),
-/* 47 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3209,7 +3295,7 @@ exports.default = Footer;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/home/b-rave/Documents/jalaj/test/affiliate-web/shared/components/Header.js';
+var _jsxFileName = '/home/rnf-52/Documents/Sachin/tasks/web/affiliate-web/shared/components/Header.js';
 
 var _react = __webpack_require__(0);
 
@@ -3688,7 +3774,7 @@ class Header extends _react.Component {
 exports.default = Header;
 
 /***/ }),
-/* 48 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3697,7 +3783,7 @@ exports.default = Header;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/home/b-rave/Documents/jalaj/test/affiliate-web/shared/components/Signup.js';
+var _jsxFileName = '/home/rnf-52/Documents/Sachin/tasks/web/affiliate-web/shared/components/Signup.js';
 
 var _react = __webpack_require__(0);
 
@@ -3725,23 +3811,23 @@ var _Label = __webpack_require__(10);
 
 var _Label2 = _interopRequireDefault(_Label);
 
-var _reactFacebook = __webpack_require__(49);
+var _reactFacebook = __webpack_require__(51);
 
 var _reactFacebook2 = _interopRequireDefault(_reactFacebook);
 
-var _reactGoogleLogin = __webpack_require__(50);
+var _reactGoogleLogin = __webpack_require__(52);
 
 var _reactGoogleLogin2 = _interopRequireDefault(_reactGoogleLogin);
 
-var _reactToastify = __webpack_require__(42);
+var _reactToastify = __webpack_require__(22);
 
-var _variables = __webpack_require__(21);
+var _variables = __webpack_require__(11);
 
 var _variables2 = _interopRequireDefault(_variables);
 
 var _reactRedux = __webpack_require__(8);
 
-var _signup = __webpack_require__(51);
+var _signup = __webpack_require__(53);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -4167,19 +4253,19 @@ function mapDispatchToProps(dispatch, props) {
 exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(Signup);
 
 /***/ }),
-/* 49 */
+/* 51 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-facebook");
 
 /***/ }),
-/* 50 */
+/* 52 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-google-login");
 
 /***/ }),
-/* 51 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4194,7 +4280,7 @@ exports.handleSignUpRequest = handleSignUpRequest;
 exports.handleSignupError = handleSignupError;
 exports._signupAction = _signupAction;
 
-var _variables = __webpack_require__(21);
+var _variables = __webpack_require__(11);
 
 var _variables2 = _interopRequireDefault(_variables);
 
@@ -4257,7 +4343,7 @@ function _signupAction(data) {
 }
 
 /***/ }),
-/* 52 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4269,7 +4355,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _jsxFileName = '/home/b-rave/Documents/jalaj/test/affiliate-web/shared/components/LookingFor.js';
+var _jsxFileName = '/home/rnf-52/Documents/Sachin/tasks/web/affiliate-web/shared/components/LookingFor.js';
 
 var _react = __webpack_require__(0);
 
@@ -4475,7 +4561,7 @@ class LookingFor extends _react.Component {
 exports.default = LookingFor;
 
 /***/ }),
-/* 53 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4484,7 +4570,7 @@ exports.default = LookingFor;
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-var _jsxFileName = '/home/b-rave/Documents/jalaj/test/affiliate-web/shared/components/BothBus.js';
+var _jsxFileName = '/home/rnf-52/Documents/Sachin/tasks/web/affiliate-web/shared/components/BothBus.js';
 
 var _react = __webpack_require__(0);
 
@@ -4498,11 +4584,11 @@ var _Label = __webpack_require__(10);
 
 var _Label2 = _interopRequireDefault(_Label);
 
-var _Select = __webpack_require__(13);
+var _Select = __webpack_require__(14);
 
 var _Select2 = _interopRequireDefault(_Select);
 
-var _TextArea = __webpack_require__(11);
+var _TextArea = __webpack_require__(12);
 
 var _TextArea2 = _interopRequireDefault(_TextArea);
 
@@ -4852,7 +4938,7 @@ class BothBus extends _react.Component {
 exports.default = BothBus;
 
 /***/ }),
-/* 54 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4861,7 +4947,7 @@ exports.default = BothBus;
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-var _jsxFileName = '/home/b-rave/Documents/jalaj/test/affiliate-web/shared/components/OnBus.js';
+var _jsxFileName = '/home/rnf-52/Documents/Sachin/tasks/web/affiliate-web/shared/components/OnBus.js';
 
 var _react = __webpack_require__(0);
 
@@ -4881,11 +4967,11 @@ var _GradButton = __webpack_require__(3);
 
 var _GradButton2 = _interopRequireDefault(_GradButton);
 
-var _Select = __webpack_require__(13);
+var _Select = __webpack_require__(14);
 
 var _Select2 = _interopRequireDefault(_Select);
 
-var _TextArea = __webpack_require__(11);
+var _TextArea = __webpack_require__(12);
 
 var _TextArea2 = _interopRequireDefault(_TextArea);
 
@@ -5150,7 +5236,7 @@ class OnBus extends _react.Component {
 exports.default = OnBus;
 
 /***/ }),
-/* 55 */
+/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5159,7 +5245,7 @@ exports.default = OnBus;
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-var _jsxFileName = '/home/b-rave/Documents/jalaj/test/affiliate-web/shared/components/OffBus.js';
+var _jsxFileName = '/home/rnf-52/Documents/Sachin/tasks/web/affiliate-web/shared/components/OffBus.js';
 
 var _react = __webpack_require__(0);
 
@@ -5175,11 +5261,11 @@ var _Label = __webpack_require__(10);
 
 var _Label2 = _interopRequireDefault(_Label);
 
-var _Select = __webpack_require__(13);
+var _Select = __webpack_require__(14);
 
 var _Select2 = _interopRequireDefault(_Select);
 
-var _TextArea = __webpack_require__(11);
+var _TextArea = __webpack_require__(12);
 
 var _TextArea2 = _interopRequireDefault(_TextArea);
 
@@ -5527,7 +5613,7 @@ class OffBus extends _react.Component {
 exports.default = OffBus;
 
 /***/ }),
-/* 56 */
+/* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5536,21 +5622,21 @@ exports.default = OffBus;
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-var _jsxFileName = '/home/b-rave/Documents/jalaj/test/affiliate-web/shared/components/PriceComp.js';
+var _jsxFileName = '/home/rnf-52/Documents/Sachin/tasks/web/affiliate-web/shared/components/PriceComp.js';
 
 var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _PriceCard = __webpack_require__(57);
+var _PriceCard = __webpack_require__(59);
 
 var _PriceCard2 = _interopRequireDefault(_PriceCard);
 
-var _Ol = __webpack_require__(58);
+var _Ol = __webpack_require__(60);
 
 var _Ol2 = _interopRequireDefault(_Ol);
 
-var _PublisherRec = __webpack_require__(59);
+var _PublisherRec = __webpack_require__(61);
 
 var _PublisherRec2 = _interopRequireDefault(_PublisherRec);
 
@@ -6153,7 +6239,7 @@ class PriceComp extends _react.Component {
 exports.default = PriceComp;
 
 /***/ }),
-/* 57 */
+/* 59 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6162,7 +6248,7 @@ exports.default = PriceComp;
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-var _jsxFileName = '/home/b-rave/Documents/jalaj/test/affiliate-web/shared/components/common/PriceCard.js';
+var _jsxFileName = '/home/rnf-52/Documents/Sachin/tasks/web/affiliate-web/shared/components/common/PriceCard.js';
 
 var _react = __webpack_require__(0);
 
@@ -6264,7 +6350,7 @@ class PriceCard extends _react.Component {
 exports.default = PriceCard;
 
 /***/ }),
-/* 58 */
+/* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6273,7 +6359,7 @@ exports.default = PriceCard;
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-var _jsxFileName = "/home/b-rave/Documents/jalaj/test/affiliate-web/shared/components/common/Ol.js";
+var _jsxFileName = "/home/rnf-52/Documents/Sachin/tasks/web/affiliate-web/shared/components/common/Ol.js";
 
 var _react = __webpack_require__(0);
 
@@ -6306,7 +6392,7 @@ class Ol extends _react.Component {
 exports.default = Ol;
 
 /***/ }),
-/* 59 */
+/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6315,7 +6401,7 @@ exports.default = Ol;
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-var _jsxFileName = '/home/b-rave/Documents/jalaj/test/affiliate-web/shared/components/common/PublisherRec.js';
+var _jsxFileName = '/home/rnf-52/Documents/Sachin/tasks/web/affiliate-web/shared/components/common/PublisherRec.js';
 
 var _react = __webpack_require__(0);
 
@@ -6469,7 +6555,7 @@ class PublisherRec extends _react.Component {
 exports.default = PublisherRec;
 
 /***/ }),
-/* 60 */
+/* 62 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6478,7 +6564,7 @@ exports.default = PublisherRec;
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-var _jsxFileName = '/home/b-rave/Documents/jalaj/test/affiliate-web/shared/components/Notification.js';
+var _jsxFileName = '/home/rnf-52/Documents/Sachin/tasks/web/affiliate-web/shared/components/Notification.js';
 
 var _react = __webpack_require__(0);
 
@@ -7174,7 +7260,7 @@ class Notification extends _react.Component {
 exports.default = Notification;
 
 /***/ }),
-/* 61 */
+/* 63 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7183,7 +7269,7 @@ exports.default = Notification;
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-var _jsxFileName = '/home/b-rave/Documents/jalaj/test/affiliate-web/shared/components/Chat.js';
+var _jsxFileName = '/home/rnf-52/Documents/Sachin/tasks/web/affiliate-web/shared/components/Chat.js';
 
 var _react = __webpack_require__(0);
 
@@ -7197,7 +7283,7 @@ var _Paragraph = __webpack_require__(2);
 
 var _Paragraph2 = _interopRequireDefault(_Paragraph);
 
-var _TextArea = __webpack_require__(11);
+var _TextArea = __webpack_require__(12);
 
 var _TextArea2 = _interopRequireDefault(_TextArea);
 
@@ -7651,7 +7737,7 @@ class Chat extends _react.Component {
 exports.default = Chat;
 
 /***/ }),
-/* 62 */
+/* 64 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7660,7 +7746,7 @@ exports.default = Chat;
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-var _jsxFileName = '/home/b-rave/Documents/jalaj/test/affiliate-web/shared/components/Search.js';
+var _jsxFileName = '/home/rnf-52/Documents/Sachin/tasks/web/affiliate-web/shared/components/Search.js';
 
 var _react = __webpack_require__(0);
 
@@ -7674,9 +7760,58 @@ var _GradButton = __webpack_require__(3);
 
 var _GradButton2 = _interopRequireDefault(_GradButton);
 
+var _reactRedux = __webpack_require__(8);
+
+var _search = __webpack_require__(65);
+
+var _tags = __webpack_require__(66);
+
+var _SearchCard = __webpack_require__(68);
+
+var _SearchCard2 = _interopRequireDefault(_SearchCard);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 class Search extends _react.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            tags: []
+        };
+        this.handleClick = this.handleClick.bind(this);
+        this.handleTagDelete = this.handleTagDelete.bind(this);
+    }
+    componentDidMount() {
+        this.props._search();
+        this.props._tags();
+    }
+    componentWillReceiveProps(props, nextProps) {
+        console.log(props, 'props');
+        console.log(nextProps, 'nextProps');
+    }
+
+    handleClick(tag) {
+        console.log(tag);
+        var tags = this.state.tags;
+        if (tags.indexOf(tag) < 0) {
+            tags.push(tag);
+            this.props._filter(tags);
+        }
+    }
+
+    handleTagDelete(tag) {
+        console.log(tag);
+        var tags = this.state.tags;
+        var tag_index = tags.indexOf(tag);
+        tags.splice(tag_index, 1);
+        this.setState({ tags: tags });
+        if (tags.length > 0) {
+            this.props._filter(tags);
+        } else {
+            this.props._search();
+        }
+    }
+
     render() {
         return _react2.default.createElement(
             'main',
@@ -7684,7 +7819,7 @@ class Search extends _react.Component {
                 __self: this,
                 __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 8
+                    lineNumber: 51
                 }
             },
             _react2.default.createElement(
@@ -7692,7 +7827,7 @@ class Search extends _react.Component {
                 { className: 'container ', __self: this,
                     __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 9
+                        lineNumber: 52
                     }
                 },
                 _react2.default.createElement(
@@ -7700,7 +7835,7 @@ class Search extends _react.Component {
                     { className: 'mt-5 wow fadeIn pt-5', __self: this,
                         __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 10
+                            lineNumber: 53
                         }
                     },
                     _react2.default.createElement(
@@ -7708,7 +7843,7 @@ class Search extends _react.Component {
                         { className: 'row', __self: this,
                             __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 11
+                                lineNumber: 54
                             }
                         },
                         _react2.default.createElement(
@@ -7716,7 +7851,7 @@ class Search extends _react.Component {
                             { className: 'col-md-12', __self: this,
                                 __source: {
                                     fileName: _jsxFileName,
-                                    lineNumber: 12
+                                    lineNumber: 55
                                 }
                             },
                             _react2.default.createElement(
@@ -7724,7 +7859,7 @@ class Search extends _react.Component {
                                 { className: 'text-center base-text py-4 mb-0', __self: this,
                                     __source: {
                                         fileName: _jsxFileName,
-                                        lineNumber: 13
+                                        lineNumber: 56
                                     }
                                 },
                                 'Find Publishers'
@@ -7734,7 +7869,7 @@ class Search extends _react.Component {
                                 { className: 'text-center base-text mb-5', __self: this,
                                     __source: {
                                         fileName: _jsxFileName,
-                                        lineNumber: 14
+                                        lineNumber: 57
                                     }
                                 },
                                 'Blog , Website , E - Commerce Store'
@@ -7744,7 +7879,7 @@ class Search extends _react.Component {
                                 { className: 'row', __self: this,
                                     __source: {
                                         fileName: _jsxFileName,
-                                        lineNumber: 15
+                                        lineNumber: 58
                                     }
                                 },
                                 _react2.default.createElement(
@@ -7752,37 +7887,33 @@ class Search extends _react.Component {
                                     { className: 'col-md-8 offset-md-2 form-inline py-0 px-0 search-inbox search-big-btn', __self: this,
                                         __source: {
                                             fileName: _jsxFileName,
-                                            lineNumber: 16
+                                            lineNumber: 59
                                         }
                                     },
                                     _react2.default.createElement(_Image2.default, { 'class': 'ml-3', width: '30', src: '../assets/images/Icon/search.png', __self: this,
                                         __source: {
                                             fileName: _jsxFileName,
-                                            lineNumber: 17
+                                            lineNumber: 60
                                         }
                                     }),
-                                    _react2.default.createElement('input', { className: 'form-control search-box', type: 'text ', placeholder: 'Search ', 'aria-label': 'Search ', value: '   ', mdbInputDirective: true, __self: this,
-                                        __source: {
-                                            fileName: _jsxFileName,
-                                            lineNumber: 17
-                                        }
-                                    }),
-                                    _react2.default.createElement(
-                                        'span',
-                                        { className: 'tags', __self: this,
-                                            __source: {
-                                                fileName: _jsxFileName,
-                                                lineNumber: 18
-                                            }
-                                        },
-                                        'Tesla ',
-                                        _react2.default.createElement(_Image2.default, { 'class': 'ml-2', src: '../assets/images/Icon/close.png', __self: this,
-                                            __source: {
-                                                fileName: _jsxFileName,
-                                                lineNumber: 18
-                                            }
-                                        })
-                                    )
+                                    this.state.tags.map((tag, i) => {
+                                        return _react2.default.createElement(
+                                            'span',
+                                            { className: 'tags', key: i, onClick: this.handleTagDelete.bind(this, tag), __self: this,
+                                                __source: {
+                                                    fileName: _jsxFileName,
+                                                    lineNumber: 64
+                                                }
+                                            },
+                                            tag,
+                                            _react2.default.createElement(_Image2.default, { 'class': 'ml-2', src: '../assets/images/Icon/close.png', __self: this,
+                                                __source: {
+                                                    fileName: _jsxFileName,
+                                                    lineNumber: 64
+                                                }
+                                            })
+                                        );
+                                    })
                                 )
                             ),
                             _react2.default.createElement(
@@ -7790,7 +7921,7 @@ class Search extends _react.Component {
                                 { className: 'row', __self: this,
                                     __source: {
                                         fileName: _jsxFileName,
-                                        lineNumber: 22
+                                        lineNumber: 72
                                     }
                                 },
                                 _react2.default.createElement(
@@ -7798,625 +7929,58 @@ class Search extends _react.Component {
                                     { className: 'col-md-8 offset-md-2 form-inline py-0 px-0 pt-3 pb-5', __self: this,
                                         __source: {
                                             fileName: _jsxFileName,
-                                            lineNumber: 23
+                                            lineNumber: 73
                                         }
                                     },
-                                    _react2.default.createElement(
-                                        'a',
-                                        { className: 'btn-tags page-link', mdbWavesEffect: true, __self: this,
-                                            __source: {
-                                                fileName: _jsxFileName,
-                                                lineNumber: 24
-                                            }
-                                        },
-                                        'Blog'
-                                    ),
-                                    _react2.default.createElement(
-                                        'a',
-                                        { className: 'btn-tags page-link', mdbWavesEffect: true, __self: this,
-                                            __source: {
-                                                fileName: _jsxFileName,
-                                                lineNumber: 25
-                                            }
-                                        },
-                                        'Website'
-                                    ),
-                                    _react2.default.createElement(
-                                        'a',
-                                        { className: 'btn-tags page-link', mdbWavesEffect: true, __self: this,
-                                            __source: {
-                                                fileName: _jsxFileName,
-                                                lineNumber: 26
-                                            }
-                                        },
-                                        'E-commerce'
-                                    ),
-                                    _react2.default.createElement(
-                                        'a',
-                                        { className: 'btn-tags page-link', mdbWavesEffect: true, __self: this,
-                                            __source: {
-                                                fileName: _jsxFileName,
-                                                lineNumber: 27
-                                            }
-                                        },
-                                        'Blog'
-                                    ),
-                                    _react2.default.createElement(
-                                        'a',
-                                        { className: 'btn-tags page-link', mdbWavesEffect: true, __self: this,
-                                            __source: {
-                                                fileName: _jsxFileName,
-                                                lineNumber: 28
-                                            }
-                                        },
-                                        'blog'
-                                    ),
-                                    _react2.default.createElement(
-                                        'a',
-                                        { className: 'btn-tags page-link', mdbWavesEffect: true, __self: this,
-                                            __source: {
-                                                fileName: _jsxFileName,
-                                                lineNumber: 29
-                                            }
-                                        },
-                                        'Website'
-                                    ),
-                                    _react2.default.createElement(
-                                        'a',
-                                        { className: 'btn-tags page-link', mdbWavesEffect: true, __self: this,
-                                            __source: {
-                                                fileName: _jsxFileName,
-                                                lineNumber: 30
-                                            }
-                                        },
-                                        'Website'
-                                    ),
-                                    _react2.default.createElement(
-                                        'a',
-                                        { className: 'btn-tags page-link', mdbWavesEffect: true, __self: this,
-                                            __source: {
-                                                fileName: _jsxFileName,
-                                                lineNumber: 31
-                                            }
-                                        },
-                                        'E-commerce'
-                                    )
-                                )
-                            ),
-                            _react2.default.createElement(
-                                'div',
-                                { className: 'card rounded mb-4', __self: this,
-                                    __source: {
-                                        fileName: _jsxFileName,
-                                        lineNumber: 35
-                                    }
-                                },
-                                _react2.default.createElement(
-                                    'div',
-                                    { className: 'row card-body mx-5 mb-4', __self: this,
-                                        __source: {
-                                            fileName: _jsxFileName,
-                                            lineNumber: 36
-                                        }
-                                    },
-                                    _react2.default.createElement(
-                                        'div',
-                                        { className: 'col-md-5 offset-md-1 align-middle', __self: this,
-                                            __source: {
-                                                fileName: _jsxFileName,
-                                                lineNumber: 37
-                                            }
-                                        },
-                                        _react2.default.createElement(
-                                            'h5',
-                                            { className: 'mt-3 mb-3', __self: this,
-                                                __source: {
-                                                    fileName: _jsxFileName,
-                                                    lineNumber: 38
-                                                }
-                                            },
-                                            'www.xyz.com '
-                                        ),
-                                        _react2.default.createElement(
-                                            'p',
-                                            {
-                                                __self: this,
-                                                __source: {
-                                                    fileName: _jsxFileName,
-                                                    lineNumber: 39
-                                                }
-                                            },
-                                            'Credibility - 97 % ',
-                                            _react2.default.createElement('br', {
-                                                __self: this,
-                                                __source: {
-                                                    fileName: _jsxFileName,
-                                                    lineNumber: 39
-                                                }
-                                            }),
-                                            ' User Trust - 89 % ',
-                                            _react2.default.createElement('br', {
-                                                __self: this,
-                                                __source: {
-                                                    fileName: _jsxFileName,
-                                                    lineNumber: 39
-                                                }
-                                            }),
-                                            ' Brand value - Good '
-                                        ),
-                                        _react2.default.createElement(
-                                            'p',
-                                            { className: 'color-primary', __self: this,
-                                                __source: {
-                                                    fileName: _jsxFileName,
-                                                    lineNumber: 40
-                                                }
-                                            },
-                                            'Expected Profit - 72 $'
-                                        )
-                                    ),
-                                    _react2.default.createElement(
-                                        'div',
-                                        { className: 'col-md-5 offset-md-1 align-middle', __self: this,
-                                            __source: {
-                                                fileName: _jsxFileName,
-                                                lineNumber: 42
-                                            }
-                                        },
-                                        _react2.default.createElement(
-                                            'h5',
-                                            { className: 'mt-3 mb-3', __self: this,
-                                                __source: {
-                                                    fileName: _jsxFileName,
-                                                    lineNumber: 43
-                                                }
-                                            },
-                                            'Blog Sub.- Insurance '
-                                        ),
-                                        _react2.default.createElement(
-                                            'p',
-                                            {
-                                                __self: this,
-                                                __source: {
-                                                    fileName: _jsxFileName,
-                                                    lineNumber: 44
-                                                }
-                                            },
-                                            'Price - 8 $ / Sale',
-                                            _react2.default.createElement('br', {
-                                                __self: this,
-                                                __source: {
-                                                    fileName: _jsxFileName,
-                                                    lineNumber: 44
-                                                }
-                                            }),
-                                            ' Request for 8 $ / Sale'
-                                        ),
-                                        _react2.default.createElement(
-                                            'p',
-                                            { className: 'color-primary', __self: this,
-                                                __source: {
-                                                    fileName: _jsxFileName,
-                                                    lineNumber: 45
-                                                }
-                                            },
-                                            'Expected Sales - 99 $ / Month'
-                                        ),
-                                        _react2.default.createElement(
+                                    this.props.Search_data.tags.tags_data.length > 0 && this.props.Search_data.tags.tags_data.map((tag, i) => {
+                                        return _react2.default.createElement(
                                             'a',
-                                            { className: 'btn-request page-link', mdbWavesEffect: true, __self: this,
-                                                __source: {
-                                                    fileName: _jsxFileName,
-                                                    lineNumber: 46
-                                                }
-                                            },
-                                            'Request'
-                                        )
-                                    )
-                                )
-                            ),
-                            _react2.default.createElement(
-                                'div',
-                                { className: 'card rounded mb-4', __self: this,
-                                    __source: {
-                                        fileName: _jsxFileName,
-                                        lineNumber: 51
-                                    }
-                                },
-                                _react2.default.createElement(
-                                    'div',
-                                    { className: 'row card-body mx-5 mb-4', __self: this,
-                                        __source: {
-                                            fileName: _jsxFileName,
-                                            lineNumber: 52
-                                        }
-                                    },
-                                    _react2.default.createElement(
-                                        'div',
-                                        { className: 'col-md-5 offset-md-1 align-middle', __self: this,
-                                            __source: {
-                                                fileName: _jsxFileName,
-                                                lineNumber: 53
-                                            }
-                                        },
-                                        _react2.default.createElement(
-                                            'h5',
-                                            { className: 'mt-3 mb-3', __self: this,
-                                                __source: {
-                                                    fileName: _jsxFileName,
-                                                    lineNumber: 54
-                                                }
-                                            },
-                                            'www.xyz.com '
-                                        ),
-                                        _react2.default.createElement(
-                                            'p',
-                                            {
-                                                __self: this,
-                                                __source: {
-                                                    fileName: _jsxFileName,
-                                                    lineNumber: 55
-                                                }
-                                            },
-                                            'Credibility - 97 % ',
-                                            _react2.default.createElement('br', {
-                                                __self: this,
-                                                __source: {
-                                                    fileName: _jsxFileName,
-                                                    lineNumber: 55
-                                                }
-                                            }),
-                                            ' User Trust - 89 % ',
-                                            _react2.default.createElement('br', {
-                                                __self: this,
-                                                __source: {
-                                                    fileName: _jsxFileName,
-                                                    lineNumber: 55
-                                                }
-                                            }),
-                                            ' Brand value - Good '
-                                        ),
-                                        _react2.default.createElement(
-                                            'p',
-                                            { className: 'color-primary', __self: this,
-                                                __source: {
-                                                    fileName: _jsxFileName,
-                                                    lineNumber: 56
-                                                }
-                                            },
-                                            'Expected Profit - 72 $'
-                                        )
-                                    ),
-                                    _react2.default.createElement(
-                                        'div',
-                                        { className: 'col-md-5 offset-md-1 align-middle', __self: this,
-                                            __source: {
-                                                fileName: _jsxFileName,
-                                                lineNumber: 58
-                                            }
-                                        },
-                                        _react2.default.createElement(
-                                            'h5',
-                                            { className: 'mt-3 mb-3', __self: this,
-                                                __source: {
-                                                    fileName: _jsxFileName,
-                                                    lineNumber: 59
-                                                }
-                                            },
-                                            'Blog Sub.- Insurance '
-                                        ),
-                                        _react2.default.createElement(
-                                            'p',
-                                            {
-                                                __self: this,
-                                                __source: {
-                                                    fileName: _jsxFileName,
-                                                    lineNumber: 60
-                                                }
-                                            },
-                                            'Price - 8 $ / Sale',
-                                            _react2.default.createElement('br', {
-                                                __self: this,
-                                                __source: {
-                                                    fileName: _jsxFileName,
-                                                    lineNumber: 60
-                                                }
-                                            }),
-                                            ' Request for 8 $ / Sale'
-                                        ),
-                                        _react2.default.createElement(
-                                            'p',
-                                            { className: 'color-primary', __self: this,
-                                                __source: {
-                                                    fileName: _jsxFileName,
-                                                    lineNumber: 61
-                                                }
-                                            },
-                                            'Expected Sales - 99 $ / Month'
-                                        ),
-                                        _react2.default.createElement(
-                                            'a',
-                                            { className: 'btn-request page-link', mdbWavesEffect: true, __self: this,
-                                                __source: {
-                                                    fileName: _jsxFileName,
-                                                    lineNumber: 62
-                                                }
-                                            },
-                                            'Request'
-                                        )
-                                    )
-                                )
-                            ),
-                            _react2.default.createElement(
-                                'div',
-                                { className: 'card rounded mb-4', __self: this,
-                                    __source: {
-                                        fileName: _jsxFileName,
-                                        lineNumber: 67
-                                    }
-                                },
-                                _react2.default.createElement(
-                                    'div',
-                                    { className: 'row card-body mx-5 mb-4', __self: this,
-                                        __source: {
-                                            fileName: _jsxFileName,
-                                            lineNumber: 68
-                                        }
-                                    },
-                                    _react2.default.createElement(
-                                        'div',
-                                        { className: 'col-md-5 offset-md-1 align-middle', __self: this,
-                                            __source: {
-                                                fileName: _jsxFileName,
-                                                lineNumber: 69
-                                            }
-                                        },
-                                        _react2.default.createElement(
-                                            'h5',
-                                            { className: 'mt-3 mb-3', __self: this,
-                                                __source: {
-                                                    fileName: _jsxFileName,
-                                                    lineNumber: 70
-                                                }
-                                            },
-                                            'www.xyz.com '
-                                        ),
-                                        _react2.default.createElement(
-                                            'p',
-                                            {
-                                                __self: this,
-                                                __source: {
-                                                    fileName: _jsxFileName,
-                                                    lineNumber: 71
-                                                }
-                                            },
-                                            'Credibility - 97 % ',
-                                            _react2.default.createElement('br', {
-                                                __self: this,
-                                                __source: {
-                                                    fileName: _jsxFileName,
-                                                    lineNumber: 71
-                                                }
-                                            }),
-                                            ' User Trust - 89 % ',
-                                            _react2.default.createElement('br', {
-                                                __self: this,
-                                                __source: {
-                                                    fileName: _jsxFileName,
-                                                    lineNumber: 71
-                                                }
-                                            }),
-                                            ' Brand value - Good '
-                                        ),
-                                        _react2.default.createElement(
-                                            'p',
-                                            { className: 'color-primary', __self: this,
-                                                __source: {
-                                                    fileName: _jsxFileName,
-                                                    lineNumber: 72
-                                                }
-                                            },
-                                            'Expected Profit - 72 $'
-                                        )
-                                    ),
-                                    _react2.default.createElement(
-                                        'div',
-                                        { className: 'col-md-5 offset-md-1 align-middle', __self: this,
-                                            __source: {
-                                                fileName: _jsxFileName,
-                                                lineNumber: 74
-                                            }
-                                        },
-                                        _react2.default.createElement(
-                                            'h5',
-                                            { className: 'mt-3 mb-3', __self: this,
-                                                __source: {
-                                                    fileName: _jsxFileName,
-                                                    lineNumber: 75
-                                                }
-                                            },
-                                            'Blog Sub.- Insurance '
-                                        ),
-                                        _react2.default.createElement(
-                                            'p',
-                                            {
-                                                __self: this,
-                                                __source: {
-                                                    fileName: _jsxFileName,
-                                                    lineNumber: 76
-                                                }
-                                            },
-                                            'Price - 8 $ / Sale',
-                                            _react2.default.createElement('br', {
-                                                __self: this,
-                                                __source: {
-                                                    fileName: _jsxFileName,
-                                                    lineNumber: 76
-                                                }
-                                            }),
-                                            ' Request for 8 $ / Sale'
-                                        ),
-                                        _react2.default.createElement(
-                                            'p',
-                                            { className: 'color-primary', __self: this,
+                                            { className: 'btn-tags page-link', key: i, onClick: this.handleClick.bind(this, tag), mdbWavesEffect: true, __self: this,
                                                 __source: {
                                                     fileName: _jsxFileName,
                                                     lineNumber: 77
                                                 }
                                             },
-                                            'Expected Sales - 99 $ / Month'
-                                        ),
-                                        _react2.default.createElement(
-                                            'a',
-                                            { className: 'btn-request page-link', mdbWavesEffect: true, __self: this,
-                                                __source: {
-                                                    fileName: _jsxFileName,
-                                                    lineNumber: 78
-                                                }
-                                            },
-                                            'Request'
-                                        )
-                                    )
+                                            tag
+                                        );
+                                    })
                                 )
                             ),
-                            _react2.default.createElement(
-                                'div',
-                                { className: 'card rounded mb-4', __self: this,
+                            Array.isArray(this.props.Search_data.search.search_data) === true && this.props.Search_data.search.search_data.length > 0 && this.props.Search_data.search.search_data.map((details, i) => {
+                                return _react2.default.createElement(_SearchCard2.default, {
+                                    key: i,
+                                    title: details.title,
+                                    credibility: details.credibility,
+                                    user_trust: details.user_trust,
+                                    brand_value: details.brand_value,
+                                    expected_profit: details.expected_profit,
+                                    expected_sales: details.expected_sales,
+                                    subject: details.subject,
+                                    price: details.price,
+                                    request_for: details.request_for,
+                                    __self: this,
                                     __source: {
                                         fileName: _jsxFileName,
-                                        lineNumber: 83
+                                        lineNumber: 87
+                                    }
+                                });
+                            }),
+                            this.props.Search_data.search.search_data === "loading" && _react2.default.createElement(
+                                'div',
+                                { className: 'text-center', __self: this,
+                                    __source: {
+                                        fileName: _jsxFileName,
+                                        lineNumber: 104
                                     }
                                 },
-                                _react2.default.createElement(
-                                    'div',
-                                    { className: 'row card-body mx-5 mb-4', __self: this,
-                                        __source: {
-                                            fileName: _jsxFileName,
-                                            lineNumber: 84
-                                        }
-                                    },
-                                    _react2.default.createElement(
-                                        'div',
-                                        { className: 'col-md-5 offset-md-1 align-middle', __self: this,
-                                            __source: {
-                                                fileName: _jsxFileName,
-                                                lineNumber: 85
-                                            }
-                                        },
-                                        _react2.default.createElement(
-                                            'h5',
-                                            { className: 'mt-3 mb-3', __self: this,
-                                                __source: {
-                                                    fileName: _jsxFileName,
-                                                    lineNumber: 86
-                                                }
-                                            },
-                                            'www.xyz.com '
-                                        ),
-                                        _react2.default.createElement(
-                                            'p',
-                                            {
-                                                __self: this,
-                                                __source: {
-                                                    fileName: _jsxFileName,
-                                                    lineNumber: 87
-                                                }
-                                            },
-                                            'Credibility - 97 % ',
-                                            _react2.default.createElement('br', {
-                                                __self: this,
-                                                __source: {
-                                                    fileName: _jsxFileName,
-                                                    lineNumber: 87
-                                                }
-                                            }),
-                                            ' User Trust - 89 % ',
-                                            _react2.default.createElement('br', {
-                                                __self: this,
-                                                __source: {
-                                                    fileName: _jsxFileName,
-                                                    lineNumber: 87
-                                                }
-                                            }),
-                                            ' Brand value - Good '
-                                        ),
-                                        _react2.default.createElement(
-                                            'p',
-                                            { className: 'color-primary', __self: this,
-                                                __source: {
-                                                    fileName: _jsxFileName,
-                                                    lineNumber: 88
-                                                }
-                                            },
-                                            'Expected Profit - 72 $'
-                                        )
-                                    ),
-                                    _react2.default.createElement(
-                                        'div',
-                                        { className: 'col-md-5 offset-md-1 align-middle', __self: this,
-                                            __source: {
-                                                fileName: _jsxFileName,
-                                                lineNumber: 90
-                                            }
-                                        },
-                                        _react2.default.createElement(
-                                            'h5',
-                                            { className: 'mt-3 mb-3', __self: this,
-                                                __source: {
-                                                    fileName: _jsxFileName,
-                                                    lineNumber: 91
-                                                }
-                                            },
-                                            'Blog Sub.- Insurance '
-                                        ),
-                                        _react2.default.createElement(
-                                            'p',
-                                            {
-                                                __self: this,
-                                                __source: {
-                                                    fileName: _jsxFileName,
-                                                    lineNumber: 92
-                                                }
-                                            },
-                                            'Price - 8 $ / Sale',
-                                            _react2.default.createElement('br', {
-                                                __self: this,
-                                                __source: {
-                                                    fileName: _jsxFileName,
-                                                    lineNumber: 92
-                                                }
-                                            }),
-                                            ' Request for 8 $ / Sale'
-                                        ),
-                                        _react2.default.createElement(
-                                            'p',
-                                            { className: 'color-primary', __self: this,
-                                                __source: {
-                                                    fileName: _jsxFileName,
-                                                    lineNumber: 93
-                                                }
-                                            },
-                                            'Expected Sales - 99 $ / Month'
-                                        ),
-                                        _react2.default.createElement(
-                                            'a',
-                                            { className: 'btn-request page-link', mdbWavesEffect: true, __self: this,
-                                                __source: {
-                                                    fileName: _jsxFileName,
-                                                    lineNumber: 94
-                                                }
-                                            },
-                                            'Request'
-                                        )
-                                    )
-                                )
+                                'Loading....'
                             ),
                             _react2.default.createElement(
                                 'div',
                                 { className: 'row', __self: this,
                                     __source: {
                                         fileName: _jsxFileName,
-                                        lineNumber: 99
+                                        lineNumber: 108
                                     }
                                 },
                                 _react2.default.createElement(
@@ -8424,7 +7988,7 @@ class Search extends _react.Component {
                                     { className: 'col-md-4 mt-2', __self: this,
                                         __source: {
                                             fileName: _jsxFileName,
-                                            lineNumber: 100
+                                            lineNumber: 109
                                         }
                                     },
                                     _react2.default.createElement(
@@ -8432,7 +7996,7 @@ class Search extends _react.Component {
                                         { className: 'font-weight-bold', __self: this,
                                             __source: {
                                                 fileName: _jsxFileName,
-                                                lineNumber: 101
+                                                lineNumber: 110
                                             }
                                         },
                                         'Showing ',
@@ -8442,7 +8006,7 @@ class Search extends _react.Component {
                                                 __self: this,
                                                 __source: {
                                                     fileName: _jsxFileName,
-                                                    lineNumber: 101
+                                                    lineNumber: 110
                                                 }
                                             },
                                             '0-5 out of 24'
@@ -8454,7 +8018,7 @@ class Search extends _react.Component {
                                     { className: 'col-md-8', __self: this,
                                         __source: {
                                             fileName: _jsxFileName,
-                                            lineNumber: 103
+                                            lineNumber: 112
                                         }
                                     },
                                     _react2.default.createElement(
@@ -8462,7 +8026,7 @@ class Search extends _react.Component {
                                         { className: 'float-right', __self: this,
                                             __source: {
                                                 fileName: _jsxFileName,
-                                                lineNumber: 104
+                                                lineNumber: 113
                                             }
                                         },
                                         _react2.default.createElement(
@@ -8470,7 +8034,7 @@ class Search extends _react.Component {
                                             { className: 'pagination pagination-circle pg-blue mb-0', __self: this,
                                                 __source: {
                                                     fileName: _jsxFileName,
-                                                    lineNumber: 105
+                                                    lineNumber: 114
                                                 }
                                             },
                                             _react2.default.createElement(
@@ -8478,7 +8042,7 @@ class Search extends _react.Component {
                                                 { className: 'page-item disabled', __self: this,
                                                     __source: {
                                                         fileName: _jsxFileName,
-                                                        lineNumber: 107
+                                                        lineNumber: 116
                                                     }
                                                 },
                                                 _react2.default.createElement(
@@ -8486,7 +8050,7 @@ class Search extends _react.Component {
                                                     { className: 'btn-previous page-link', mdbWavesEffect: true, __self: this,
                                                         __source: {
                                                             fileName: _jsxFileName,
-                                                            lineNumber: 107
+                                                            lineNumber: 116
                                                         }
                                                     },
                                                     'Previous'
@@ -8497,7 +8061,7 @@ class Search extends _react.Component {
                                                 { className: 'page-item disabled', __self: this,
                                                     __source: {
                                                         fileName: _jsxFileName,
-                                                        lineNumber: 109
+                                                        lineNumber: 118
                                                     }
                                                 },
                                                 _react2.default.createElement(
@@ -8505,7 +8069,7 @@ class Search extends _react.Component {
                                                     { className: 'page-link', mdbWavesEffect: true, 'aria-label': 'Previous', __self: this,
                                                         __source: {
                                                             fileName: _jsxFileName,
-                                                            lineNumber: 110
+                                                            lineNumber: 119
                                                         }
                                                     },
                                                     _react2.default.createElement(
@@ -8513,7 +8077,7 @@ class Search extends _react.Component {
                                                         { className: 'sr-only', __self: this,
                                                             __source: {
                                                                 fileName: _jsxFileName,
-                                                                lineNumber: 111
+                                                                lineNumber: 120
                                                             }
                                                         },
                                                         'Previous'
@@ -8525,7 +8089,7 @@ class Search extends _react.Component {
                                                 { className: 'page-item active', __self: this,
                                                     __source: {
                                                         fileName: _jsxFileName,
-                                                        lineNumber: 114
+                                                        lineNumber: 123
                                                     }
                                                 },
                                                 _react2.default.createElement(
@@ -8533,7 +8097,7 @@ class Search extends _react.Component {
                                                     { className: 'pagination-items page-link', mdbWavesEffect: true, __self: this,
                                                         __source: {
                                                             fileName: _jsxFileName,
-                                                            lineNumber: 114
+                                                            lineNumber: 123
                                                         }
                                                     },
                                                     '1'
@@ -8544,7 +8108,7 @@ class Search extends _react.Component {
                                                 { className: 'page-item', __self: this,
                                                     __source: {
                                                         fileName: _jsxFileName,
-                                                        lineNumber: 115
+                                                        lineNumber: 124
                                                     }
                                                 },
                                                 _react2.default.createElement(
@@ -8552,95 +8116,10 @@ class Search extends _react.Component {
                                                     { className: 'pagination-items page-link', mdbWavesEffect: true, __self: this,
                                                         __source: {
                                                             fileName: _jsxFileName,
-                                                            lineNumber: 115
+                                                            lineNumber: 124
                                                         }
                                                     },
                                                     '2'
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                'li',
-                                                { className: 'page-item', __self: this,
-                                                    __source: {
-                                                        fileName: _jsxFileName,
-                                                        lineNumber: 116
-                                                    }
-                                                },
-                                                _react2.default.createElement(
-                                                    'a',
-                                                    { className: 'pagination-items page-link', mdbWavesEffect: true, __self: this,
-                                                        __source: {
-                                                            fileName: _jsxFileName,
-                                                            lineNumber: 116
-                                                        }
-                                                    },
-                                                    '3'
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                'li',
-                                                { className: 'page-item', __self: this,
-                                                    __source: {
-                                                        fileName: _jsxFileName,
-                                                        lineNumber: 117
-                                                    }
-                                                },
-                                                _react2.default.createElement(
-                                                    'a',
-                                                    { className: 'pagination-items page-link', mdbWavesEffect: true, __self: this,
-                                                        __source: {
-                                                            fileName: _jsxFileName,
-                                                            lineNumber: 117
-                                                        }
-                                                    },
-                                                    '4'
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                'li',
-                                                { className: 'page-item', __self: this,
-                                                    __source: {
-                                                        fileName: _jsxFileName,
-                                                        lineNumber: 118
-                                                    }
-                                                },
-                                                _react2.default.createElement(
-                                                    'a',
-                                                    { className: 'pagination-items page-link', mdbWavesEffect: true, __self: this,
-                                                        __source: {
-                                                            fileName: _jsxFileName,
-                                                            lineNumber: 118
-                                                        }
-                                                    },
-                                                    '5'
-                                                )
-                                            ),
-                                            _react2.default.createElement(
-                                                'li',
-                                                { className: 'page-item', __self: this,
-                                                    __source: {
-                                                        fileName: _jsxFileName,
-                                                        lineNumber: 120
-                                                    }
-                                                },
-                                                _react2.default.createElement(
-                                                    'a',
-                                                    { className: 'page-link', mdbWavesEffect: true, 'aria-label': 'Next', __self: this,
-                                                        __source: {
-                                                            fileName: _jsxFileName,
-                                                            lineNumber: 121
-                                                        }
-                                                    },
-                                                    _react2.default.createElement(
-                                                        'span',
-                                                        { className: 'sr-only', __self: this,
-                                                            __source: {
-                                                                fileName: _jsxFileName,
-                                                                lineNumber: 122
-                                                            }
-                                                        },
-                                                        'Next'
-                                                    )
                                                 )
                                             ),
                                             _react2.default.createElement(
@@ -8653,10 +8132,95 @@ class Search extends _react.Component {
                                                 },
                                                 _react2.default.createElement(
                                                     'a',
-                                                    { className: 'btn-next page-link', __self: this,
+                                                    { className: 'pagination-items page-link', mdbWavesEffect: true, __self: this,
                                                         __source: {
                                                             fileName: _jsxFileName,
                                                             lineNumber: 125
+                                                        }
+                                                    },
+                                                    '3'
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                'li',
+                                                { className: 'page-item', __self: this,
+                                                    __source: {
+                                                        fileName: _jsxFileName,
+                                                        lineNumber: 126
+                                                    }
+                                                },
+                                                _react2.default.createElement(
+                                                    'a',
+                                                    { className: 'pagination-items page-link', mdbWavesEffect: true, __self: this,
+                                                        __source: {
+                                                            fileName: _jsxFileName,
+                                                            lineNumber: 126
+                                                        }
+                                                    },
+                                                    '4'
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                'li',
+                                                { className: 'page-item', __self: this,
+                                                    __source: {
+                                                        fileName: _jsxFileName,
+                                                        lineNumber: 127
+                                                    }
+                                                },
+                                                _react2.default.createElement(
+                                                    'a',
+                                                    { className: 'pagination-items page-link', mdbWavesEffect: true, __self: this,
+                                                        __source: {
+                                                            fileName: _jsxFileName,
+                                                            lineNumber: 127
+                                                        }
+                                                    },
+                                                    '5'
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                'li',
+                                                { className: 'page-item', __self: this,
+                                                    __source: {
+                                                        fileName: _jsxFileName,
+                                                        lineNumber: 129
+                                                    }
+                                                },
+                                                _react2.default.createElement(
+                                                    'a',
+                                                    { className: 'page-link', mdbWavesEffect: true, 'aria-label': 'Next', __self: this,
+                                                        __source: {
+                                                            fileName: _jsxFileName,
+                                                            lineNumber: 130
+                                                        }
+                                                    },
+                                                    _react2.default.createElement(
+                                                        'span',
+                                                        { className: 'sr-only', __self: this,
+                                                            __source: {
+                                                                fileName: _jsxFileName,
+                                                                lineNumber: 131
+                                                            }
+                                                        },
+                                                        'Next'
+                                                    )
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                'li',
+                                                { className: 'page-item', __self: this,
+                                                    __source: {
+                                                        fileName: _jsxFileName,
+                                                        lineNumber: 134
+                                                    }
+                                                },
+                                                _react2.default.createElement(
+                                                    'a',
+                                                    { className: 'btn-next page-link', __self: this,
+                                                        __source: {
+                                                            fileName: _jsxFileName,
+                                                            lineNumber: 134
                                                         }
                                                     },
                                                     'Next'
@@ -8674,13 +8238,13 @@ class Search extends _react.Component {
                     { className: 'text-center py-4 mt-3', __self: this,
                         __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 133
+                            lineNumber: 142
                         }
                     },
                     _react2.default.createElement(_GradButton2.default, { 'class': 'btn blue-gradient btn-rounded px-5', type: 'submit', text: 'Skip', __self: this,
                         __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 134
+                            lineNumber: 143
                         }
                     })
                 ),
@@ -8688,38 +8252,278 @@ class Search extends _react.Component {
                     __self: this,
                     __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 136
+                        lineNumber: 145
                     }
                 }),
                 _react2.default.createElement('br', {
                     __self: this,
                     __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 137
+                        lineNumber: 146
                     }
                 }),
                 _react2.default.createElement('br', {
                     __self: this,
                     __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 138
+                        lineNumber: 147
                     }
                 }),
                 _react2.default.createElement('br', {
                     __self: this,
                     __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 139
+                        lineNumber: 148
                     }
                 })
             )
         );
     }
 }
-exports.default = Search;
+
+function mapStateToProps(state) {
+    const Search_data = state;
+    console.log("State", Search_data);
+    return { Search_data };
+}
+function mapDispatchToProps(dispatch, props) {
+    return {
+        _search: () => {
+            dispatch((0, _search._searchAction)());
+        },
+        _tags: () => {
+            dispatch((0, _tags._tagsAction)());
+        },
+        _filter: tags => {
+            dispatch((0, _search._searchFilterAction)(tags));
+        }
+    };
+}
+
+exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(Search);
 
 /***/ }),
-/* 63 */
+/* 65 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.SEARCHERROR = exports.SEARCHREQUEST = exports.SEARCHSUCCESS = undefined;
+exports.handleSearchSuccess = handleSearchSuccess;
+exports.handleSearchRequest = handleSearchRequest;
+exports.handleSearchError = handleSearchError;
+exports._searchAction = _searchAction;
+exports._searchFilterAction = _searchFilterAction;
+
+var _variables = __webpack_require__(11);
+
+var _variables2 = _interopRequireDefault(_variables);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+const SEARCHSUCCESS = exports.SEARCHSUCCESS = 'SEARCHSUCCESS';
+const SEARCHREQUEST = exports.SEARCHREQUEST = 'SEARCHREQUEST';
+const SEARCHERROR = exports.SEARCHERROR = 'SEARCHERROR';
+
+const apiURL = _variables2.default.configFiles.apiUrl;
+const temp_url = "http://localhost:5000/api/search/";
+const filter_url = "http://localhost:5000/api/search/filter";
+
+const searchData = [{
+  title: 'www.xyz.com',
+  subject: 'Insurance',
+  credibility: '97 %',
+  user_trust: '89 %',
+  brand_value: 'Good',
+  price: '8 $ / Sale',
+  request_for: '8 $ / Sale',
+  expected_profit: '72 $',
+  expected_sales: '99 $ / Month',
+  tags: ["Insurance", "Life Cover"]
+}, {
+  title: 'www.asd.com',
+  subject: 'Life Cover',
+  credibility: '96 %',
+  user_trust: '89 %',
+  brand_value: 'Excellent',
+  price: '8 $ / Sale',
+  request_for: '8 $ / Sale',
+  expected_profit: '72 $',
+  expected_sales: '99 $ / Month',
+  tags: ["Life Cover", "Banking"]
+
+}, {
+  title: 'www.abc.com',
+  subject: 'Banking',
+  credibility: '93 %',
+  user_trust: '89 %',
+  brand_value: 'Good',
+  price: '8 $ / Sale',
+  request_for: '8 $ / Sale',
+  expected_profit: '72 $',
+  expected_sales: '99 $ / Month',
+  tags: ["Banking", "Life Cover"]
+
+}, {
+  title: 'www.cde.com',
+  subject: 'Education',
+  credibility: '94 %',
+  user_trust: '89 %',
+  brand_value: 'Good',
+  price: '8 $ / Sale',
+  request_for: '8 $ / Sale',
+  expected_profit: '72 $',
+  expected_sales: '99 $ / Month',
+  tags: ["Education", "Life Cover", "Blog"]
+
+}, {
+  title: 'www.qwerty.com',
+  subject: 'Insurance',
+  credibility: '97 %',
+  user_trust: '89 %',
+  brand_value: 'Good',
+  price: '8 $ / Sale',
+  request_for: '8 $ / Sale',
+  expected_profit: '72 $',
+  expected_sales: '99 $ / Month',
+  tags: ["Insurance", "Banking"]
+
+}];
+// sending received response form fetchSEARCH to reducer
+function handleSearchSuccess(res) {
+  return {
+    type: SEARCHSUCCESS,
+    payload: res
+  };
+}
+
+function handleSearchRequest() {
+  return {
+    type: SEARCHREQUEST,
+    message: 'loading'
+  };
+}
+
+// to handle error
+function handleSearchError(err) {
+  return {
+    type: SEARCHERROR,
+    payload: err,
+    message: err.message
+  };
+}
+
+// sending post request of search data i.e. email and password to backend
+function _searchAction() {
+
+  return dispatch => {
+    dispatch(handleSearchRequest());
+    fetch(temp_url).then(res => res.json()).then(res => {
+      return dispatch(handleSearchSuccess(res.data));
+    }).catch(err => {
+      return dispatch(handleSearchError(err));
+    });
+  };
+}
+
+function _searchFilterAction(tags) {
+  console.log(tags.length);
+  if (tags.length > 0) {
+    console.log(tags);
+    const url = filter_url + '/?tags=' + tags;
+    console.log('searchFilterAction');
+    return dispatch => {
+      dispatch(handleSearchRequest());
+      fetch(url, {
+        method: 'get',
+        headers: {
+          Accept: 'application/json , text/plain, */*',
+          'Content-type': 'application/json'
+        }
+      }).then(res => res.json()).then(res => {
+        return dispatch(handleSearchSuccess(res.data));
+      }).catch(err => {
+        return dispatch(handleSearchError(err));
+      });
+    };
+  }
+}
+
+/***/ }),
+/* 66 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.TAGSERROR = exports.TAGSREQUEST = exports.TAGSSUCCESS = undefined;
+exports.handleTagsSuccess = handleTagsSuccess;
+exports.handleTagsRequest = handleTagsRequest;
+exports.handleTagsError = handleTagsError;
+exports._tagsAction = _tagsAction;
+
+var _variables = __webpack_require__(11);
+
+var _variables2 = _interopRequireDefault(_variables);
+
+var _constants = __webpack_require__(67);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+const TAGSSUCCESS = exports.TAGSSUCCESS = 'TAGSSUCCESS';
+const TAGSREQUEST = exports.TAGSREQUEST = 'TAGSREQUEST';
+const TAGSERROR = exports.TAGSERROR = 'TAGSERROR';
+
+const tags = ['Blog', 'Website', 'E-commerce', 'Insurance', 'Banking', 'Education'];
+// sending received response form fetchSEARCH to reducer
+function handleTagsSuccess(res) {
+  return {
+    type: TAGSSUCCESS,
+    payload: res
+  };
+}
+
+function handleTagsRequest() {
+  return {
+    type: TAGSREQUEST,
+    message: 'loading'
+  };
+}
+
+// to handle error
+function handleTagsError(err) {
+  return {
+    type: TAGSERROR,
+    payload: err,
+    message: err.message
+  };
+}
+
+// sending post request of search data i.e. email and password to backend
+function _tagsAction() {
+  console.log('tagsAction');
+
+  return dispatch => {
+    dispatch(handleTagsRequest());
+    return dispatch(handleTagsSuccess(tags));
+  };
+}
+
+/***/ }),
+/* 67 */
+/***/ (function(module, exports) {
+
+module.exports = require("constants");
+
+/***/ }),
+/* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8728,7 +8532,181 @@ exports.default = Search;
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-var _jsxFileName = '/home/b-rave/Documents/jalaj/test/affiliate-web/shared/components/Sales.js';
+var _jsxFileName = "/home/rnf-52/Documents/Sachin/tasks/web/affiliate-web/shared/components/common/SearchCard.js";
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+class SearchCard extends _react.Component {
+    constructor(props) {
+        super(props);
+    }
+    render() {
+        return _react2.default.createElement(
+            "div",
+            { className: "card rounded mb-4", __self: this,
+                __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 10
+                }
+            },
+            _react2.default.createElement(
+                "div",
+                { className: "row card-body mx-5 mb-4", __self: this,
+                    __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 11
+                    }
+                },
+                _react2.default.createElement(
+                    "div",
+                    { className: "col-md-5 offset-md-1 align-middle", __self: this,
+                        __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 12
+                        }
+                    },
+                    _react2.default.createElement(
+                        "h5",
+                        { className: "mt-3 mb-3", __self: this,
+                            __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 13
+                            }
+                        },
+                        this.props.title,
+                        " "
+                    ),
+                    _react2.default.createElement(
+                        "p",
+                        {
+                            __self: this,
+                            __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 14
+                            }
+                        },
+                        "Credibility - ",
+                        this.props.credibility,
+                        " ",
+                        _react2.default.createElement("br", {
+                            __self: this,
+                            __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 14
+                            }
+                        }),
+                        " User Trust - ",
+                        this.props.user_trust,
+                        " ",
+                        _react2.default.createElement("br", {
+                            __self: this,
+                            __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 14
+                            }
+                        }),
+                        " Brand value - ",
+                        this.props.brand_value,
+                        " "
+                    ),
+                    _react2.default.createElement(
+                        "p",
+                        { className: "color-primary", __self: this,
+                            __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 15
+                            }
+                        },
+                        "Expected Profit - ",
+                        this.props.expected_profit
+                    )
+                ),
+                _react2.default.createElement(
+                    "div",
+                    { className: "col-md-5 offset-md-1 align-middle", __self: this,
+                        __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 17
+                        }
+                    },
+                    _react2.default.createElement(
+                        "h5",
+                        { className: "mt-3 mb-3", __self: this,
+                            __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 18
+                            }
+                        },
+                        "Blog Sub.- ",
+                        this.props.subject,
+                        " "
+                    ),
+                    _react2.default.createElement(
+                        "p",
+                        {
+                            __self: this,
+                            __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 19
+                            }
+                        },
+                        "Price - ",
+                        this.props.price,
+                        _react2.default.createElement("br", {
+                            __self: this,
+                            __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 19
+                            }
+                        }),
+                        " Request for ",
+                        this.props.request_for
+                    ),
+                    _react2.default.createElement(
+                        "p",
+                        { className: "color-primary", __self: this,
+                            __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 20
+                            }
+                        },
+                        "Expected Sales - ",
+                        this.props.expected_sales
+                    ),
+                    _react2.default.createElement(
+                        "a",
+                        { className: "btn-request page-link", mdbWavesEffect: true, __self: this,
+                            __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 21
+                            }
+                        },
+                        "Request"
+                    )
+                )
+            )
+        );
+    }
+
+}
+
+exports.default = SearchCard;
+
+/***/ }),
+/* 69 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+var _jsxFileName = '/home/rnf-52/Documents/Sachin/tasks/web/affiliate-web/shared/components/Sales.js';
 
 var _react = __webpack_require__(0);
 
@@ -10794,7 +10772,13 @@ class Sales extends _react.Component {
 exports.default = Sales;
 
 /***/ }),
-/* 64 */
+/* 70 */
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+/* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10803,10 +10787,10 @@ exports.default = Sales;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/home/b-rave/Documents/jalaj/test/affiliate-web/server/middleware/reactApplication/ServerHTML.js'; /**
-                                                                                                                        * This module is responsible for generating the HTML page response for
-                                                                                                                        * the react application middleware.
-                                                                                                                        */
+var _jsxFileName = '/home/rnf-52/Documents/Sachin/tasks/web/affiliate-web/server/middleware/reactApplication/ServerHTML.js'; /**
+                                                                                                                              * This module is responsible for generating the HTML page response for
+                                                                                                                              * the react application middleware.
+                                                                                                                              */
 
 /* eslint-disable react/no-danger */
 /* eslint-disable react/no-array-index-key */
@@ -10815,11 +10799,11 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = __webpack_require__(14);
+var _propTypes = __webpack_require__(15);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _serializeJavascript = __webpack_require__(22);
+var _serializeJavascript = __webpack_require__(23);
 
 var _serializeJavascript2 = _interopRequireDefault(_serializeJavascript);
 
@@ -10827,23 +10811,23 @@ var _config = __webpack_require__(1);
 
 var _config2 = _interopRequireDefault(_config);
 
-var _ifElse = __webpack_require__(19);
+var _ifElse = __webpack_require__(20);
 
 var _ifElse2 = _interopRequireDefault(_ifElse);
 
-var _removeNil = __webpack_require__(20);
+var _removeNil = __webpack_require__(21);
 
 var _removeNil2 = _interopRequireDefault(_removeNil);
 
-var _getClientBundleEntryAssets = __webpack_require__(65);
+var _getClientBundleEntryAssets = __webpack_require__(72);
 
 var _getClientBundleEntryAssets2 = _interopRequireDefault(_getClientBundleEntryAssets);
 
-var _ClientConfig = __webpack_require__(66);
+var _ClientConfig = __webpack_require__(73);
 
 var _ClientConfig2 = _interopRequireDefault(_ClientConfig);
 
-var _HTML = __webpack_require__(68);
+var _HTML = __webpack_require__(75);
 
 var _HTML2 = _interopRequireDefault(_HTML);
 
@@ -10979,7 +10963,7 @@ ServerHTML.propTypes = {
 exports.default = ServerHTML;
 
 /***/ }),
-/* 65 */
+/* 72 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10990,7 +10974,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = getClientBundleEntryAssets;
 
-var _fs = __webpack_require__(12);
+var _fs = __webpack_require__(13);
 
 var _fs2 = _interopRequireDefault(_fs);
 
@@ -11049,7 +11033,7 @@ function getClientBundleEntryAssets() {
 }
 
 /***/ }),
-/* 66 */
+/* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11058,25 +11042,25 @@ function getClientBundleEntryAssets() {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/home/b-rave/Documents/jalaj/test/affiliate-web/config/components/ClientConfig.js';
+var _jsxFileName = '/home/rnf-52/Documents/Sachin/tasks/web/affiliate-web/config/components/ClientConfig.js';
 
 var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = __webpack_require__(14);
+var _propTypes = __webpack_require__(15);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _serializeJavascript = __webpack_require__(22);
+var _serializeJavascript = __webpack_require__(23);
 
 var _serializeJavascript2 = _interopRequireDefault(_serializeJavascript);
 
-var _filterWithRules = __webpack_require__(67);
+var _filterWithRules = __webpack_require__(74);
 
 var _filterWithRules2 = _interopRequireDefault(_filterWithRules);
 
-var _values = __webpack_require__(18);
+var _values = __webpack_require__(19);
 
 var _values2 = _interopRequireDefault(_values);
 
@@ -11122,7 +11106,7 @@ ClientConfig.propTypes = {
 exports.default = ClientConfig;
 
 /***/ }),
-/* 67 */
+/* 74 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11185,7 +11169,7 @@ function filterWithRules(rules, obj) {
 }
 
 /***/ }),
-/* 68 */
+/* 75 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11197,14 +11181,14 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _jsxFileName = '/home/b-rave/Documents/jalaj/test/affiliate-web/shared/components/HTML/index.js'; /* eslint-disable react/no-danger */
+var _jsxFileName = '/home/rnf-52/Documents/Sachin/tasks/web/affiliate-web/shared/components/HTML/index.js'; /* eslint-disable react/no-danger */
 /* eslint-disable jsx-a11y/html-has-lang */
 
 var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = __webpack_require__(14);
+var _propTypes = __webpack_require__(15);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
@@ -11276,7 +11260,7 @@ HTML.defaultProps = {
 exports.default = HTML;
 
 /***/ }),
-/* 69 */
+/* 76 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11286,15 +11270,15 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _uuid = __webpack_require__(70);
+var _uuid = __webpack_require__(77);
 
 var _uuid2 = _interopRequireDefault(_uuid);
 
-var _hpp = __webpack_require__(71);
+var _hpp = __webpack_require__(78);
 
 var _hpp2 = _interopRequireDefault(_hpp);
 
-var _helmet = __webpack_require__(72);
+var _helmet = __webpack_require__(79);
 
 var _helmet2 = _interopRequireDefault(_helmet);
 
@@ -11419,25 +11403,25 @@ _helmet2.default.contentSecurityPolicy(cspConfig)];
 exports.default = securityMiddleware;
 
 /***/ }),
-/* 70 */
+/* 77 */
 /***/ (function(module, exports) {
 
 module.exports = require("uuid");
 
 /***/ }),
-/* 71 */
+/* 78 */
 /***/ (function(module, exports) {
 
 module.exports = require("hpp");
 
 /***/ }),
-/* 72 */
+/* 79 */
 /***/ (function(module, exports) {
 
 module.exports = require("helmet");
 
 /***/ }),
-/* 73 */
+/* 80 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11447,7 +11431,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _express = __webpack_require__(15);
+var _express = __webpack_require__(16);
 
 var _express2 = _interopRequireDefault(_express);
 
@@ -11471,7 +11455,7 @@ exports.default = _express2.default.static((0, _path.resolve)(_appRootDir2.defau
 });
 
 /***/ }),
-/* 74 */
+/* 81 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11501,7 +11485,7 @@ function serviceWorkerMiddleware(req, res, next) {
 exports.default = serviceWorkerMiddleware;
 
 /***/ }),
-/* 75 */
+/* 82 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11512,7 +11496,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = offlinePageMiddleware;
 
-var _fs = __webpack_require__(12);
+var _fs = __webpack_require__(13);
 
 var _path = __webpack_require__(6);
 
@@ -11559,7 +11543,7 @@ function offlinePageMiddleware(req, res, next) {
 }
 
 /***/ }),
-/* 76 */
+/* 83 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11598,12 +11582,6 @@ function unexpectedErrorMiddleware(err, req, res, next) {
 }];
 
 exports.default = errorHandlersMiddleware;
-
-/***/ }),
-/* 77 */
-/***/ (function(module, exports) {
-
-
 
 /***/ })
 /******/ ]);
